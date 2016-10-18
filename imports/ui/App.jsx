@@ -6,6 +6,9 @@ import HeroInstance from  './Hero.jsx';
 import ContentsInstance from  './Contents.jsx';
 import FooterInstance from  './Footer.jsx';
 
+// import styles
+import './styles/winterschool2017.scss';
+
 export default class App extends Component {
   render() {
     return (
