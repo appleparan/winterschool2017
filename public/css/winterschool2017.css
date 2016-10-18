@@ -44,4 +44,7 @@ a.anchor {
     visibility: hidden;
 }
 
-
+address {
+  display: block;
+  font-style: italic;
+}
