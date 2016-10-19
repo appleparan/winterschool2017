@@ -24,7 +24,7 @@ export default class NavbarInstance extends React.Component {
               <MenuItem eventKey={3.2} href="#travel">Travel</MenuItem>
             </NavDropdown>
             <Navbar.Form pullLeft>
-              <Button bsStyle="primary" href="#registration">Register Now </Button>
+              <Button eventKey={4} bsStyle="primary" href="#registration">Register Now </Button>
             </Navbar.Form>
           </Nav>
         </Navbar.Collapse>
