@@ -14,11 +14,11 @@ body {
 }
 
 .section-header {
-  font-size: 22px; 
+  font-size: 26px; 
 }
 
 .section-subheader {
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .section-subsubheader {
@@ -46,6 +46,10 @@ a.anchor {
     position: relative;
     top: -50px;
     visibility: hidden;
+}
+
+footer {
+  margin-top: 20px;
 }
 
 address {

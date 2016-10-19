@@ -261,17 +261,17 @@ export default class contentsinstance extends Component {
         </Col></Row>
         <Row>
           <Col sm={12} md={4}>
-              <h2> Zaffiro </h2>
-              <p> Tower Center 3F (80석)</p>
-              <img className="img-responsive" src="/img/zaffiro.jpg" alt="" />
+            <h2 className="section-subheader"> Zaffiro </h2>
+            <p> Tower Center 3F (80석)</p>
+            <img className="img-responsive" src="/img/zaffiro.jpg" alt="" />
           </Col>
           <Col sm={12} md={4}>
-            <h2> Rubino </h2>
+            <h2 className="section-subheader"> Rubino </h2>
             <p> Tower Center 3F (13석) </p>
             <img className="img-responsive" src="/img/rubino.jpg" alt="" />
           </Col>
           <Col sm={12} md={4}>
-            <h2> Granato </h2>
+            <h2 className="section-subheader"> Granato </h2>
             <p> Tower Center 2F (60석)</p>
             <img className="img-responsive" src="/img/granato.jpg" alt="" />
           </Col>
@@ -284,8 +284,10 @@ export default class contentsinstance extends Component {
         </Col></Row>
         <Row>
           <Col md={6}>
-            <h2 className="section-subheader">대명리조트 쏘노펠리체</h2>
             <img className="img-responsive" src="/img/venue.jpg" alt="" />
+          </Col>  
+          <Col md={6}>
+            <h2 className="section-subheader">대명리조트 쏘노펠리체</h2>
             <ul>
               <li> 노블리안 실버스위트 (1객실당 방2개, 거실1개) </li>
               <li>Daemyung Resort, Sonofelice, Noblian Sliver Suite (2 rooms &amp; 1 living room / 1Unit)</li>
