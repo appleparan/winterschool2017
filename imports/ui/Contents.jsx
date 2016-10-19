@@ -7,7 +7,7 @@ export default class contentsinstance extends Component {
     <Grid>
       <section className="overview">
         <Row>
-          <h3 className="section-header">Overview</h3>
+          <h1 className="section-header">Overview</h1>
         </Row>
         <Row>
           <ul>
@@ -31,7 +31,7 @@ export default class contentsinstance extends Component {
       <section className="organizer">
         <a name="Organizers" className="anchor"> </a>
         <Row>
-          <h3 className="section-header">Organizers</h3>
+          <h1 className="section-header">Organizers</h1>
         </Row>
         <Row>
           <Table responsive>
@@ -69,7 +69,7 @@ export default class contentsinstance extends Component {
       <section className="speakers">
         <a name="Speakers" className="anchor"></a>
         <Row>
-          <h3 className="section-header">Speakers</h3>
+          <h1 className="section-header">Speakers</h1>
         </Row>
         <Row>
           <Table responsive>
@@ -153,7 +153,7 @@ export default class contentsinstance extends Component {
       <section className="schedule">
         <a name="Schedule" className="anchor"></a>
         <Row>
-          <h3 className="section-header">Schedule</h3>
+          <h1 className="section-header">Schedule</h1>
         </Row>
         <Row>
           <Table responsive>
@@ -173,7 +173,7 @@ export default class contentsinstance extends Component {
                 <td>1</td>
                 <td>Mon. 9 Jan.</td>
                 <td>16:00-18:00</td>
-                <td>Someone</td>
+                <td>TBA</td>
                 <td>-</td>
                 <td>Invited Speaker</td>
                 <td>Granato(2F)</td>
@@ -182,7 +182,7 @@ export default class contentsinstance extends Component {
                 <td>1</td>
                 <td>Mon. 9 Jan.</td>
                 <td>16:00-18:00</td>
-                <td>Someone</td>
+                <td>TBA</td>
                 <td>-</td>
                 <td>Invited Speaker</td>
                 <td>Rubino(3F)</td>
@@ -191,7 +191,7 @@ export default class contentsinstance extends Component {
                 <td>1</td>
                 <td>Mon. 9 Jan.</td>
                 <td>16:00-18:00</td>
-                <td>Someone</td>
+                <td>TBA</td>
                 <td>A3 Meeting</td>
                 <td>Invited Speaker</td>
                 <td>Zaffiro(3F)</td>
@@ -226,15 +226,14 @@ export default class contentsinstance extends Component {
       <section className="Registration">
         <a name="Registration" className="anchor"></a>
         <Row>
-          <h3 className="section-header">Registration</h3>
+          <h1 className="section-header">Registration</h1>
         </Row>
         <Row>
-          <h4> 등록 : 200,000 원 </h4>
+          <p> Registration Fee : <i class="fa fa-krw" aria-hidden="true"></i> 200,000 </p>
           <p> Registration Fee includes : Dinner (Monday,Tuesday), Coffee and Snacks</p>
-          <h5>등록 안내 - 10월 초 온라인 결제시스템 오픈</h5>
           <ul>
-            <li>사전 등록 기간 : 2016년 11월 15일 까지</li>
-            <li>추가 등록 기간 : 2016년 11월 16일 - 30일 까지</li>
+            <li>Early registration Deadline : Nov 15, 2016 </li>
+            <li>추가 등록 기간 : 2016년 11월 16일 - 30일 까지.. 이거 왜 해요? 일찍하면 할인해주는 것도 아니고..</li>
             <li>사전에 온라인 등록 및 결제를 하여야 참여가능하며, 현장등록은 불가합니다.</li>
             <li><strong>결제 금액 환불 및 취소는 불가</strong>하므로 신중히 결제하여 주시기 바랍니다.</li>
             <li>Registration fee for foreign A3 participants will be exempted.</li>
@@ -242,7 +241,7 @@ export default class contentsinstance extends Component {
         </Row>
         <Row>
           <span className="hidden">
-            <h5>준비물</h5>
+            <h2>준비물</h2>
             <ul>
               <li>개인 노트북 지참 (딥러닝 실습용, 사용 소프트웨어 및 예제 미리설치 필요)</li>
               <li>Program Install Guideline (*맥북 사용 가능)</li>
@@ -252,27 +251,27 @@ export default class contentsinstance extends Component {
           </span>
         </Row>
         <Row>
-          <h5><a href="https://goo.gl/forms/DdbIepxJOGShQ7j32------">온라인 등록 : Go to Online Registration</a></h5>
+          <p><a href="https://goo.gl/forms/DdbIepxJOGShQ7j32------">온라인 등록 : Go to Online Registration</a></p>
         </Row>
       </section>
       <section className="venue">
         <a name="Venue" className="anchor"></a>
         <Row>
-          <h3 className="section-header">Venue</h3>
+          <h1 className="section-header">Venue</h1>
         </Row>
         <Row>
           <Col sm={12} md={4}>
-              <h4> Zaffiro </h4>
+              <h2> Zaffiro </h2>
               <p> Tower Center 3F (80석)</p>
               <img className="img-responsive" src="/img/zaffiro.jpg" alt="" />
           </Col>
           <Col sm={12} md={4}>
-            <h4> Rubino </h4>
+            <h2> Rubino </h2>
             <p> Tower Center 3F (13석) </p>
             <img className="img-responsive" src="/img/rubino.jpg" alt="" />
           </Col>
           <Col sm={12} md={4}>
-            <h4> Granato </h4>
+            <h2> Granato </h2>
             <p> Tower Center 2F (60석)</p>
             <img className="img-responsive" src="/img/granato.jpg" alt="" />
           </Col>
@@ -281,11 +280,11 @@ export default class contentsinstance extends Component {
       <section className="accommodation">
         <a name="Accommodation" className="anchor"></a>
         <Row>
-          <h3 className="section-header">Accommodation</h3>
+          <h1 className="section-header">Accommodation</h1>
         </Row>
         <Row>
           <Col md={6}>
-            <h4>대명리조트 쏘노펠리체</h4>
+            <h2>대명리조트 쏘노펠리체</h2>
             <ul>
               <li> 노블리안 실버스위트 (1객실당 방2개, 거실1개) </li>
               <li>Daemyung Resort, Sonofelice, Noblian Sliver Suite (2 rooms &amp; 1 living room / 1Unit)</li>
@@ -304,14 +303,14 @@ export default class contentsinstance extends Component {
       <section className="Transportation">
         <a name="Travel &amp; Transportation" className="anchor"></a>
         <Row>
-          <h3 className="section-header">Travel &amp; Transportation</h3>
+          <h1 className="section-header">Travel &amp; Transportation</h1>
         </Row>
         <Row>
-          <h4>Travel</h4>
+          <h2>Travel</h2>
           <p>Questions about the Visa Invitation Letter application process, e-mail: a3inverse@gmail.com - 추후공지</p>
         </Row>
         <Row>
-          <h3>Transportation</h3>
+          <h2>Transportation</h2>
           <p>How to get to Sonofelice (Daemyung Resort, Vivaldi Park)- 추후공지</p>
           <p><a href="http://www.daemyungresort.com/web/dm_english/html/01vivaldi_english_sub_10.html">English</a></p>
           <p><a href="http://www.daemyungresort.com/web/dm_china/html/01vivaldi_china_sub_10.html">China</a></p>
