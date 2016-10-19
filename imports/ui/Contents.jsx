@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Grid, Row, Col, Table } from 'react-bootstrap';
+import { Grid, Row, Col, Table, Button, ButtonToolbar } from 'react-bootstrap';
 
 export default class contentsinstance extends Component {
   render() {
@@ -285,18 +285,19 @@ export default class contentsinstance extends Component {
         <Row>
           <Col md={6}>
             <h2 className="section-subheader">대명리조트 쏘노펠리체</h2>
+            <img className="img-responsive" src="/img/venue.jpg" alt="" />
             <ul>
               <li> 노블리안 실버스위트 (1객실당 방2개, 거실1개) </li>
               <li>Daemyung Resort, Sonofelice, Noblian Sliver Suite (2 rooms &amp; 1 living room / 1Unit)</li>
+              <li>숙박 및 콘도가격은 사무국으로 문의해주세요. (a3inverse@gmail.com)</li>
             </ul>
-            <p>숙박 및 콘도가격은 사무국으로 문의해주세요. (a3inverse@gmail.com)</p>
-            <p>Homepage</p>
-            <p><a href="https://www.daemyungresort.com/daemyung.front.foreign.main.main.ds/dmparse.dm">English</a></p>
-            <p><a href="https://www.daemyungresort.com/daemyung.front.foreign.chn.main.main.ds/dmparse.dm">China</a></p>
-            <p><a href="https://www.daemyungresort.com/daemyung.front.foreign.jpn.main.main.ds/dmparse.dm">Japan</a></p>
-          </Col>
-          <Col md={6}>
-            <img className="img-responsive" src="/img/venue.jpg" alt="" />
+            <h3 className="section-subsubheader">Homepage</h3>
+            <ButtonToolbar>
+              <Button href="https://www.daemyungresort.com">Korean</Button>
+              <Button href="https://www.daemyungresort.com/daemyung.front.foreign.main.main.ds/dmparse.dm">English</Button>
+              <Button href="https://www.daemyungresort.com/daemyung.front.foreign.chn.main.main.ds/dmparse.dm">China</Button>
+              <Button href="https://www.daemyungresort.com/daemyung.front.foreign.jpn.main.main.ds/dmparse.dm">Japan</Button>
+            </ButtonToolbar>
           </Col>
         </Row>
       </section>
@@ -312,9 +313,12 @@ export default class contentsinstance extends Component {
         <Row><Col xs={12}>
           <h2 className="section-subheader">Transportation</h2>
           <p>How to get to Sonofelice (Daemyung Resort, Vivaldi Park)- 추후공지</p>
-          <p><a href="http://www.daemyungresort.com/web/dm_english/html/01vivaldi_english_sub_10.html">English</a></p>
-          <p><a href="http://www.daemyungresort.com/web/dm_china/html/01vivaldi_china_sub_10.html">China</a></p>
-          <p><a href="http://www.daemyungresort.com/web/dm_japan/html/01vivaldi_japan_sub_10.html">Japan</a></p>
+          <ButtonToolbar>
+            <Button href="http://www.daemyungresort.com/daemyung.front.saupjang.yangpyung.resort_way_map.ds/dmparse.dm?menuNo=04">Korean</Button>
+            <Button href="http://www.daemyungresort.com/web/dm_english/html/01vivaldi_english_sub_10.html">English</Button>
+            <Button href="http://www.daemyungresort.com/web/dm_china/html/01vivaldi_china_sub_10.html">China</Button>
+            <Button href="http://www.daemyungresort.com/web/dm_japan/html/01vivaldi_japan_sub_10.html">Japan</Button>
+          </ButtonToolbar>
         </Col></Row>
       </section>
     </Grid>
