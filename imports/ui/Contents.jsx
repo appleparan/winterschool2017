@@ -6,10 +6,10 @@ export default class contentsinstance extends Component {
     return (
     <Grid>
       <section className="overview">
-        <Row>
+        <Row><Col xs={12}>
           <h1 className="section-header">Overview</h1>
-        </Row>
-        <Row>
+        </Col></Row>
+        <Row><Col xs={12}>
           <ul>
             <li>Date : 9-11 January 2017 </li>
             <li>Location : Sonofelice, Hongcheon-Gun, Gangwon-Do, Korea</li>
@@ -23,17 +23,17 @@ export default class contentsinstance extends Component {
                 aiming to provide insight into the various interfaces among mathematical theories, scientific computation,
                 and the visualization of real-world problems for students and researchers.</p>
           </ul>
-        </Row>
-        <Row>
+        </Col></Row>
+        <Row><Col xs={12}>
           <img className="img-responsive" src="/img/logo.jpg" alt="" />
-        </Row>
+        </Col></Row>
       </section>
       <section className="organizer">
-        <a name="Organizers" className="anchor"> </a>
-        <Row>
+        <a name="organizers" className="anchor"> </a>
+        <Row><Col xs={12}>
           <h1 className="section-header">Organizers</h1>
-        </Row>
-        <Row>
+        </Col></Row>
+        <Row><Col xs={12}>
           <Table responsive>
             <thead>
               <tr>
@@ -64,14 +64,14 @@ export default class contentsinstance extends Component {
               </tr>
             </tbody>
           </Table>
-        </Row>
+        </Col></Row>
       </section>
       <section className="speakers">
-        <a name="Speakers" className="anchor"></a>
-        <Row>
+        <a name="speakers" className="anchor"></a>
+        <Row><Col xs={12}>
           <h1 className="section-header">Speakers</h1>
-        </Row>
-        <Row>
+        </Col></Row>
+        <Row><Col xs={12}>
           <Table responsive>
             <thead>
               <tr>
@@ -148,14 +148,14 @@ export default class contentsinstance extends Component {
               </tr>
             </tbody>
           </Table>
-        </Row>
+        </Col></Row>
       </section>
       <section className="schedule">
         <a name="Schedule" className="anchor"></a>
-        <Row>
+        <Row><Col xs={12}>
           <h1 className="section-header">Schedule</h1>
-        </Row>
-        <Row>
+        </Col></Row>
+        <Row><Col xs={12}>
           <Table responsive>
             <thead>
               <tr>
@@ -216,19 +216,19 @@ export default class contentsinstance extends Component {
               </tr>
             </tbody>
           </Table>
-        </Row>
-        <Row>
+        </Col></Row>
+        <Row><Col xs={12}>
           <ul>
             <li>The schedule may be changed depending on the circumstances.</li>
           </ul>
-        </Row>
+        </Col></Row>
       </section>
       <section className="Registration">
         <a name="Registration" className="anchor"></a>
-        <Row>
+        <Row><Col xs={12}>
           <h1 className="section-header">Registration</h1>
-        </Row>
-        <Row>
+        </Col></Row>
+        <Row><Col xs={12}>
           <p> Registration Fee : <i class="fa fa-krw" aria-hidden="true"></i> 200,000 </p>
           <p> Registration Fee includes : Dinner (Monday,Tuesday), Coffee and Snacks</p>
           <ul>
@@ -238,10 +238,10 @@ export default class contentsinstance extends Component {
             <li><strong>결제 금액 환불 및 취소는 불가</strong>하므로 신중히 결제하여 주시기 바랍니다.</li>
             <li>Registration fee for foreign A3 participants will be exempted.</li>
           </ul>
-        </Row>
-        <Row>
+        </Col></Row>
+        <Row><Col xs={12}>
           <span className="hidden">
-            <h2>준비물</h2>
+            <h2 className="section-subheader">준비물</h2>
             <ul>
               <li>개인 노트북 지참 (딥러닝 실습용, 사용 소프트웨어 및 예제 미리설치 필요)</li>
               <li>Program Install Guideline (*맥북 사용 가능)</li>
@@ -249,16 +249,16 @@ export default class contentsinstance extends Component {
               <li>현장 : 해당 안내물 배포</li>
             </ul>
           </span>
-        </Row>
-        <Row>
+        </Col></Row>
+        <Row><Col xs={12}>
           <p><a href="https://goo.gl/forms/DdbIepxJOGShQ7j32------">온라인 등록 : Go to Online Registration</a></p>
-        </Row>
+        </Col></Row>
       </section>
       <section className="venue">
         <a name="Venue" className="anchor"></a>
-        <Row>
+        <Row><Col xs={12}>
           <h1 className="section-header">Venue</h1>
-        </Row>
+        </Col></Row>
         <Row>
           <Col sm={12} md={4}>
               <h2> Zaffiro </h2>
@@ -279,12 +279,12 @@ export default class contentsinstance extends Component {
       </section>
       <section className="accommodation">
         <a name="Accommodation" className="anchor"></a>
-        <Row>
+        <Row><Col xs={12}>
           <h1 className="section-header">Accommodation</h1>
-        </Row>
+        </Col></Row>
         <Row>
           <Col md={6}>
-            <h2>대명리조트 쏘노펠리체</h2>
+            <h2 className="section-subheader">대명리조트 쏘노펠리체</h2>
             <ul>
               <li> 노블리안 실버스위트 (1객실당 방2개, 거실1개) </li>
               <li>Daemyung Resort, Sonofelice, Noblian Sliver Suite (2 rooms &amp; 1 living room / 1Unit)</li>
@@ -302,20 +302,20 @@ export default class contentsinstance extends Component {
       </section>
       <section className="Transportation">
         <a name="Travel &amp; Transportation" className="anchor"></a>
-        <Row>
+        <Row><Col xs={12}>
           <h1 className="section-header">Travel &amp; Transportation</h1>
-        </Row>
-        <Row>
-          <h2>Travel</h2>
+        </Col></Row>
+        <Row><Col xs={12}>
+          <h2 className="section-subheader">Travel</h2>
           <p>Questions about the Visa Invitation Letter application process, e-mail: a3inverse@gmail.com - 추후공지</p>
-        </Row>
-        <Row>
-          <h2>Transportation</h2>
+        </Col></Row>
+        <Row><Col xs={12}>
+          <h2 className="section-subheader">Transportation</h2>
           <p>How to get to Sonofelice (Daemyung Resort, Vivaldi Park)- 추후공지</p>
           <p><a href="http://www.daemyungresort.com/web/dm_english/html/01vivaldi_english_sub_10.html">English</a></p>
           <p><a href="http://www.daemyungresort.com/web/dm_china/html/01vivaldi_china_sub_10.html">China</a></p>
           <p><a href="http://www.daemyungresort.com/web/dm_japan/html/01vivaldi_japan_sub_10.html">Japan</a></p>
-        </Row>
+        </Col></Row>
       </section>
     </Grid>
     );
