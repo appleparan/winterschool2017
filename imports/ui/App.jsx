@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
 import NavbarInstance from  './Navbar.jsx';
-import HeroInstance from  './Hero.jsx';
-import ContentsInstance from  './Contents.jsx';
+import ContentsInstance from  './MainContents.jsx';
 import FooterInstance from  './Footer.jsx';
 
 // import styles
@@ -13,10 +12,15 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <NavbarInstance />
-        <HeroInstance />
-        <ContentsInstance />
-        <FooterInstance />
+        <header>
+          <NavbarInstance />
+        </header>
+        <div>
+          <ContentsInstance />
+        </div>
+        <footer>
+          <FooterInstance />
+        </footer>
       </div>
     )
   }
