@@ -1,5 +1,5 @@
 {
-  "name": "winter",
+  "name": "a3winter2017",
   "private": true,
   "scripts": {
     "start": "meteor run"
@@ -8,8 +8,6 @@
     "meteor-node-stubs": "~0.2.0",
     "react": "^15.3.2",
     "react-bootstrap": "^0.30.5",
-    "react-dom": "^15.3.2",
-    "react-native": "^0.35.0",
-    "react-native-meteor": "^1.0.1"
+    "react-dom": "^15.3.2"
   }
 }
