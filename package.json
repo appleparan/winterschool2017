@@ -5,9 +5,15 @@
     "start": "meteor run"
   },
   "dependencies": {
+    "emailjs": "^1.0.8",
     "meteor-node-stubs": "~0.2.0",
+    "passwordless": "^1.1.2",
+    "passwordless-mongostore": "^0.1.4",
     "react": "^15.3.2",
+    "react-addons-pure-render-mixin": "^15.3.2",
     "react-bootstrap": "^0.30.5",
-    "react-dom": "^15.3.2"
+    "react-dom": "^15.3.2",
+    "react-meteor-data": "^0.2.9",
+    "react-mounter": "^1.2.0"
   }
 }
