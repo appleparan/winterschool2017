@@ -3,6 +3,7 @@ import { Grid, Row, Col, Table, Button, ButtonToolbar } from 'react-bootstrap';
 
 export class RegisterIntro extends React.Component {
   render() {
+    const wellStyles = {maxWidth: 400, margin: '0 auto 10px'};
     return (
       <Grid>
         <section className="RegistrationIntro">
@@ -32,9 +33,10 @@ export class RegisterIntro extends React.Component {
               </ul>
             </span>
           </Col></Row>
-          <Row><Col xs={12}>
-            <p><a href="https://goo.gl/forms/DdbIepxJOGShQ7j32------">온라인 등록 : Go to Online Registration</a></p>
-          </Col></Row>
+          <div className="well" style={wellStyles}>
+           <Button bsStyle="primary" href="https://goo.gl/forms/DdbIepxJOGShQ7j32" bsSize="large" block> Online  Registration </Button>
+           <Button bsSize="large" block> Go Payment </Button>
+         </div>
         </section>
       </Grid>
     )
