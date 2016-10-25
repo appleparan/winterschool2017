@@ -16,9 +16,7 @@ import { Program } from  '/imports/ui/pages/Program.jsx';
 import { Schedule } from  '/imports/ui/pages/Schedule.jsx';
 import { Venue } from  '/imports/ui/pages/Venue.jsx';
 
-import { RegisterIntro } from '/imports/ui/pages/RegisterIntro.jsx'
-// import { LoginContents } from  '/imports/ui/pages/Login.jsx';
-// import { SignupContents } from  '/imports/ui/pages/Signup.jsx';
+import { Register } from '/imports/ui/pages/Register.jsx'
 
 Meteor.startup( () => {
   render(
@@ -28,7 +26,7 @@ Meteor.startup( () => {
         <Route path="program" component={ Program } />
         <Route path="schedule" component={ Schedule } />
         <Route path="venue" component={ Venue } />
-        <Route path="registernow" component={ RegisterIntro } />
+        <Route path="register" component={ Register } />
       </Route>
     </Router>,
     document.getElementById( 'react-root' )

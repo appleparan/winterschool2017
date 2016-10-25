@@ -1,7 +1,8 @@
 import React from 'react';
 import { Grid, Row, Col, Table, Button, ButtonToolbar } from 'react-bootstrap';
+import { RegisterPoll } from './Registerpoll.jsx';
 
-export class RegisterIntro extends React.Component {
+export class Register extends React.Component {
   render() {
     const wellStyles = {maxWidth: 400, margin: '0 auto 10px'};
     return (
@@ -22,6 +23,7 @@ export class RegisterIntro extends React.Component {
               <li>Registration fee for foreign A3 participants will be exempted.</li>
             </ul>
           </Col></Row>
+          /*
           <Row><Col xs={12}>
             <span className="hidden">
               <h2 className="section-subheader">준비물</h2>
@@ -33,8 +35,10 @@ export class RegisterIntro extends React.Component {
               </ul>
             </span>
           </Col></Row>
+          */
           <div className="well" style={wellStyles}>
-           <Button bsStyle="primary" href="https://goo.gl/forms/DdbIepxJOGShQ7j32" bsSize="large" block> Online  Registration </Button>
+           // <Button bsStyle="primary" href="https://goo.gl/forms/DdbIepxJOGShQ7j32" bsSize="large" block> Online Registration </Button>
+           { RegisterPoll }
            <Button bsSize="large" block> Go Payment </Button>
          </div>
         </section>
