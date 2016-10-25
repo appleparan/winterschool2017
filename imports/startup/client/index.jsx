@@ -15,6 +15,8 @@ import { Overview } from  '/imports/ui/pages/Overview.jsx';
 import { Program } from  '/imports/ui/pages/Program.jsx';
 import { Schedule } from  '/imports/ui/pages/Schedule.jsx';
 import { Venue } from  '/imports/ui/pages/Venue.jsx';
+
+import { RegisterIntro } from '/imports/ui/pages/RegisterIntro.jsx'
 // import { LoginContents } from  '/imports/ui/pages/Login.jsx';
 // import { SignupContents } from  '/imports/ui/pages/Signup.jsx';
 
@@ -23,9 +25,10 @@ Meteor.startup( () => {
     <Router history={ browserHistory } >
       <Route path="/" components={ AppContainer }>
         <IndexRoute component={ Overview } />
-        <Route path="/program" component={ Program } />
-        <Route path="/schedule" component={ Schedule } />
-        <Route path="/venue" component={ Venue } />
+        <Route path="program" component={ Program } />
+        <Route path="schedule" component={ Schedule } />
+        <Route path="venue" component={ Venue } />
+        <Route path="registernow" component={ RegisterIntro } />
       </Route>
     </Router>,
     document.getElementById( 'react-root' )

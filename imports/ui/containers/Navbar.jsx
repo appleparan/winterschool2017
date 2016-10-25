@@ -8,29 +8,30 @@ import { IndexLinkContainer, LinkContainer } from 'react-router-bootstrap';
 // https://themeteorchef.com/snippets/react-router-basics/#tmc-setting-up-our-routes
 export const NavbarLayout = () => (
   <Navbar fixedTop>
-    <Navbar.Header>
-      <LinkContainer to="/">
+    <IndexLinkContainer to="/">
+      <Navbar.Header>
         <Navbar.Brand>
-          2017 Winter School
+        <IndexLinkContainer to="/">
+          <a>2017 Winter School</a>
+        </IndexLinkContainer>
         </Navbar.Brand>
-      </LinkContainer>
-      <Navbar.Toggle />
-    </Navbar.Header>
+        <Navbar.Toggle />
+      </Navbar.Header>
+    </IndexLinkContainer>
     <Navbar.Collapse>
       <Nav pullRight>
-        <NavDropdown title="Program" id="navbar-drop-speaker">
-          <LinkContainer to="/program#organizers"><MenuItem>Organizers</MenuItem></LinkContainer>
-          <LinkContainer to="/program#speakers"><MenuItem>Speakers</MenuItem></LinkContainer>
-        </NavDropdown>
-        <LinkContainer to="/schedule"><NavItem>Schedule</NavItem></LinkContainer>
-        <NavDropdown title="Venue" id="navbar-drop-accomm">
-          <LinkContainer to="/venue#room"><MenuItem>Venue</MenuItem></LinkContainer>
-          <LinkContainer to="/venue#accommodation"><MenuItem>Accommodation</MenuItem></LinkContainer>
-          <LinkContainer to="/venue#travel"><MenuItem>Travel</MenuItem></LinkContainer>
-        </NavDropdown>
+        <LinkContainer to="/program">
+          <NavItem title="Program" eventKey="1">Organizers</NavItem>
+        </LinkContainer>
+        <LinkContainer to="/schedule">
+          <NavItem title="Schedule" eventKey="2">Schedule</NavItem>
+        </LinkContainer>
+        <LinkContainer to="/venue">
+          <NavItem title="Venue" eventKey="3">Venue</NavItem>
+        </LinkContainer>
         <Navbar.Form pullLeft>
-          <LinkContainer to="/login">
-            <Button bsStyle="primary">Register Now </Button>
+          <LinkContainer to="/registernow">
+            <Button  eventKey="4" bsStyle="primary"> Register Now </Button>
           </LinkContainer>
         </Navbar.Form>
       </Nav>
