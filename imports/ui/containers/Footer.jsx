@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { render } from 'react-dom';
 
 import { Grid, Row, Col } from 'react-bootstrap';
+import FontAwesome from 'react-fontawesome';
 
-// export class FooterLayout extends Component {
 export const FooterLayout = () => (
 
   <Grid>
@@ -13,8 +13,8 @@ export const FooterLayout = () => (
         <p> <strong>Event manager</strong> </p>
         <p>
           Haeeun Han <br />
-          <i className="fa fa-phone" aria-hidden="true"></i> (82) 2 2123-6121 <br />
-          <i className="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:csedept@yonsei.ac.kr"> csedept@yonsei.ac.kr</a>
+          <FontAwesome name="phone" /> (82) 2 2123-6121 <br />
+          <FontAwesome name="envelope-o" /> <a href="mailto:csedept@yonsei.ac.kr"> csedept@yonsei.ac.kr</a>
         </p>
       </Col>
 
@@ -24,9 +24,9 @@ export const FooterLayout = () => (
           <strong>MEDVIEWSOFT</strong><br />
           50 Yonsei-ro, Seodaemun-gu<br />
           Seoul, Korea, 03722<br />
-          <i className="fa fa-link" aria-hidden="true"></i> <a href="http://mediviewsoft.com/"> homepage </a> <br />
-          <i className="fa fa-phone" aria-hidden="true"></i> (82) 2 2123-6121 <br />
-          <i className="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:csedept@yonsei.ac.kr"> csedept@yonsei.ac.kr</a>
+          <FontAwesome name="link" /> <a href="http://mediviewsoft.com/"> homepage </a> <br />
+          <FontAwesome name="phone" /> (82) 2 2123-6121 <br />
+          <FontAwesome name="envelope-o" /> <a href="mailto:csedept@yonsei.ac.kr"> csedept@yonsei.ac.kr</a>
         </address>
       </Col>
     </Row>
