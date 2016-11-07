@@ -1,13 +1,85 @@
-import React from 'react';
-import { Grid, Row, Col, Table, Button, ButtonToolbar } from 'react-bootstrap';
-import { RegisterPoll } from './Registerpoll.jsx';
+import { check, Match } from 'meteor/check';
+// import { Accounts } from 'meteor/std:accounts-ui';
+import { Accounts } from 'meteor/accounts-base';
 
-export class Register extends React.Component {
+import React, { Component } from 'react';
+import { Grid, Row, Col, Table, Button, ButtonToolbar, Well,
+    Form, FormGroup, FormControl, ControlLabel, HelpBlock,
+    Radio
+ } from 'react-bootstrap';
+import ReactDOM, { findDOMNode } from 'react-dom';
+import Script from 'react-load-script';
+
+import { RegisterPollFormKor, RegisterPollFormNonKor, RegisterPollFormCommon } from './RegisterPollForm.jsx';
+import { EmailForm } from './EmailVerification.jsx';
+
+export class Register extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isKorean : false,
+      isNonKorean : false,
+      userEmail : {
+        email : '',
+        isEmailVerified : false,
+      },
+      userKorSpec : {
+        agreedKoreanPrivacyPolicy : false,
+        korName : '',
+        mobilePhoneNum : '',
+      },
+      userNonKorSpec : {
+        nationality : '',
+      },
+      userCommon : {
+        engLastName : '',
+        engFirstName : '',
+        afflication : '',
+        position : '',
+        advisorName : '',
+        isPresentPoster : false
+      }
+    };
+  }
+
+  handleKor(event) {
+    this.setState({ isKorean : true });
+    this.setState({ isNonKorean : false });
+  }
+
+  handleNonKor(event) {
+    this.setState({ isKorean : false });
+    this.setState({ isNonKorean : true });
+  }
+
+  sendEmails(_state) {
+    this.setState({
+      userEmail : _state
+    })
+  }
+
+  sendCommonUser(_state) {
+    this.setState({
+      userCommon : _state
+    })
+  }
+
+  sendKorUser(_state) {
+    this.setState({
+      userKorSpec : _state
+    })
+  }
+
+  sendNonKorUser(_state) {
+    this.setState({
+      userNonKorSpec : _state
+    })
+  }
+
   render() {
-    const wellStyles = {maxWidth: 400, margin: '0 auto 10px'};
     return (
       <Grid>
-        <section className="RegistrationIntro">
+        <section className="Registration">
           <a name="registration" className="anchor"></a>
           <Row><Col xs={12}>
             <h1 className="section-header">Registration</h1>
@@ -23,7 +95,6 @@ export class Register extends React.Component {
               <li>Registration fee for foreign A3 participants will be exempted.</li>
             </ul>
           </Col></Row>
-          /*
           <Row><Col xs={12}>
             <span className="hidden">
               <h2 className="section-subheader">준비물</h2>
@@ -35,14 +106,46 @@ export class Register extends React.Component {
               </ul>
             </span>
           </Col></Row>
-          */
-          <div className="well" style={wellStyles}>
-           // <Button bsStyle="primary" href="https://goo.gl/forms/DdbIepxJOGShQ7j32" bsSize="large" block> Online Registration </Button>
-           { RegisterPoll }
-           <Button bsSize="large" block> Go Payment </Button>
-         </div>
         </section>
-      </Grid>
+
+        <Row>
+          <Col xs={12}>
+          <Well bsSize="large">
+            <section className="RegisterForm">
+              <EmailForm sendEmails={ this.sendEmails.bind(this) } />
+              <Row>
+                <ButtonToolbar>
+                  <Col xs={6}>
+                    <Col xsOffset={3}>
+                      <Button bsSize="large" onClick={ this.handleKor.bind(this) } > Korean </Button>
+                    </Col>
+                  </Col>
+                  <Col xs={6}>
+                    <Col xsOffset={3}>
+                      <Button bsSize="large" onClick={ this.handleNonKor.bind(this) }> Non-Korean </Button>
+                    </Col>
+                  </Col>
+                </ButtonToolbar>
+              </Row>
+              {
+                this.state.isKorean && !this.state.isNonKorean && <div>
+                    <RegisterPollFormKor sendRegisterKorUser={ this.sendKorUser.bind(this) } />
+                    <RegisterPollFormCommon sendRegisterCommonUser={ this.sendCommonUser.bind(this) } />
+                    <Button bsSize="large" block type="submit"> 제출 및 결제하기 </Button>
+                  </div>
+              }
+              {
+                this.state.isNonKorean && !this.state.isKorean && <div>
+                  <RegisterPollFormNonKor sendRegisterNonKorUser={ this.sendNonKorUser.bind(this) } />
+                  <RegisterPollFormCommon sendRegisterCommonUser={ this.sendCommonUser.bind(this) } />
+                  <Button bsSize="large" block type="submit"> Submit  </Button>
+                </div>
+              }
+              </section>
+         </Well>
+        </Col>
+      </Row>
+    </Grid>
     )
   }
 }

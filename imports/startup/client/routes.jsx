@@ -1,3 +1,4 @@
+import { Meteor } from 'meteor/meteor';
 import React from 'react';
 import { render } from 'react-dom';
 import { Router, Route, browserHistory, IndexRoute } from 'react-router';
@@ -30,7 +31,5 @@ Meteor.startup( () => {
       </Route>
     </Router>,
     document.getElementById( 'react-root' )
-
-
   );
 });
