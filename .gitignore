@@ -4,3 +4,4 @@ node_modules/
 
 # ignore because of security reasons
 settings.json
+mail-url.js
