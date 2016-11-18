@@ -1,85 +1,17 @@
-import { check, Match } from 'meteor/check';
-// import { Accounts } from 'meteor/std:accounts-ui';
-import { Accounts } from 'meteor/accounts-base';
-
 import React, { Component } from 'react';
-import { Grid, Row, Col, Table, Button, ButtonToolbar, Well,
-    Form, FormGroup, FormControl, ControlLabel, HelpBlock,
-    Radio
- } from 'react-bootstrap';
-import ReactDOM, { findDOMNode } from 'react-dom';
-import Script from 'react-load-script';
+import { Grid, Row, Col, Table, Button, ButtonToolbar } from 'react-bootstrap';
+import { IndexLink, Link, browserHistory } from 'react-router';
+import { IndexLinkContainer, LinkContainer } from 'react-router-bootstrap';
 
-import { RegisterPollFormKor, RegisterPollFormNonKor, RegisterPollFormCommon } from './RegisterPollForm.jsx';
-import { EmailForm } from './EmailVerification.jsx';
-
-export class Register extends Component {
+export class RegisterInfo extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      isKorean : false,
-      isNonKorean : false,
-      userEmail : {
-        email : '',
-        isEmailVerified : false,
-      },
-      userKorSpec : {
-        agreedKoreanPrivacyPolicy : false,
-        korName : '',
-        mobilePhoneNum : '',
-      },
-      userNonKorSpec : {
-        nationality : '',
-      },
-      userCommon : {
-        engLastName : '',
-        engFirstName : '',
-        afflication : '',
-        position : '',
-        advisorName : '',
-        isPresentPoster : false
-      }
-    };
-  }
-
-  handleKor(event) {
-    this.setState({ isKorean : true });
-    this.setState({ isNonKorean : false });
-  }
-
-  handleNonKor(event) {
-    this.setState({ isKorean : false });
-    this.setState({ isNonKorean : true });
-  }
-
-  sendEmails(_state) {
-    this.setState({
-      userEmail : _state
-    })
-  }
-
-  sendCommonUser(_state) {
-    this.setState({
-      userCommon : _state
-    })
-  }
-
-  sendKorUser(_state) {
-    this.setState({
-      userKorSpec : _state
-    })
-  }
-
-  sendNonKorUser(_state) {
-    this.setState({
-      userNonKorSpec : _state
-    })
   }
 
   render() {
     return (
       <Grid>
-        <section className="Registration">
+        <section className="registration-info">
           <a name="registration" className="anchor"></a>
           <Row><Col xs={12}>
             <h1 className="section-header">Registration</h1>
@@ -110,39 +42,11 @@ export class Register extends Component {
 
         <Row>
           <Col xs={12}>
-          <Well bsSize="large">
-            <section className="RegisterForm">
-              <EmailForm sendEmails={ this.sendEmails.bind(this) } />
-              <Row>
-                <ButtonToolbar>
-                  <Col xs={6}>
-                    <Col xsOffset={3}>
-                      <Button bsSize="large" onClick={ this.handleKor.bind(this) } > Korean </Button>
-                    </Col>
-                  </Col>
-                  <Col xs={6}>
-                    <Col xsOffset={3}>
-                      <Button bsSize="large" onClick={ this.handleNonKor.bind(this) }> Non-Korean </Button>
-                    </Col>
-                  </Col>
-                </ButtonToolbar>
-              </Row>
-              {
-                this.state.isKorean && !this.state.isNonKorean && <div>
-                    <RegisterPollFormKor sendRegisterKorUser={ this.sendKorUser.bind(this) } />
-                    <RegisterPollFormCommon sendRegisterCommonUser={ this.sendCommonUser.bind(this) } />
-                    <Button bsSize="large" block type="submit"> 제출 및 결제하기 </Button>
-                  </div>
-              }
-              {
-                this.state.isNonKorean && !this.state.isKorean && <div>
-                  <RegisterPollFormNonKor sendRegisterNonKorUser={ this.sendNonKorUser.bind(this) } />
-                  <RegisterPollFormCommon sendRegisterCommonUser={ this.sendCommonUser.bind(this) } />
-                  <Button bsSize="large" block type="submit"> Submit  </Button>
-                </div>
-              }
-              </section>
-         </Well>
+          <section  className="get-ticket-btn">
+            <LinkContainer to="/profile">
+              <Button> Get a Ticket! </Button>
+            </LinkContainer>
+          </section>
         </Col>
       </Row>
     </Grid>

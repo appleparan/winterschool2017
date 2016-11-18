@@ -24,7 +24,14 @@ export class Profile extends Tracker.Component {
       browserHistory.push('/signin');
     }
   }
-  
+
+  componentDidUpdate() {
+     // Navigate to a sign in page if the user isn't authenticated when data changes
+    if (!this.state.isAuthenticated) {
+      browserHistory.push('/signin');
+    }
+  }
+
   render() {
     return (
       <Grid>

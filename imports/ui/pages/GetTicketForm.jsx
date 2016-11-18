@@ -23,22 +23,16 @@ export class GetTicketForm extends Tracker.Component {
     this.state = {
       isKorean : false,
       isNonKorean : false,
-      userKorSpec : {
-        agreedKoreanPrivacyPolicy : false,
-        korName : '',
-        mobilePhoneNum : '',
-      },
-      userNonKorSpec : {
-        nationality : '',
-      },
-      userCommon : {
-        engLastName : '',
-        engFirstName : '',
-        affliation : '',
-        position : '',
-        advisorName : '',
-        isPresentPoster : false
-      }
+      agreedKoreanPrivacyPolicy : false,
+      korName : '',
+      mobilePhoneNum : '',
+      nationality : '',
+      engLastName : '',
+      engFirstName : '',
+      affiliation : '',
+      position : '',
+      advisorName : '',
+      willPresentPoster : false
     };
     this.autorun(() => {
       this.setState({
@@ -57,65 +51,57 @@ export class GetTicketForm extends Tracker.Component {
     this.setState({ isNonKorean : true });
   }
 
-  handleKorOnSubmit(event) {
-    event.preventDefault();
+  handleOnChange(_change) {
+    this.setState(_change);
+  }
 
-    ticket = {
+  handleKorOnSubmit(event) {
+    // event.preventDefault();
+
+    Meteor.call('tickets.insertKor', {
       isKorean : true,
       email : Meteor.user().emails[0].address,
-      agreedKoreanPrivacyPolicy : this.state.userKorSpec.agreedKoreanPrivacyPolicy,
-      korName : this.state.userKorSpec.korName.trim(),
-      mobilePhoneNum : this.state.userKorSpec.mobilePhoneNum.trim(),
-      engLastName : this.state.userCommon.engLastName.trim(),
-      engFirstName : this.state.userCommon.engFirstName.trim(),
-      affliation : this.state.userCommon.affliation.trim(),
-      position : this.state.userCommon.position.trim(),
-      advisorName : this.state.userCommon.advisorName.trim(),
-      isPresentPoster : this.state.userCommon.isPresentPoster
-    }
+      agreedKoreanPrivacyPolicy : this.state.agreedKoreanPrivacyPolicy,
+      korName : this.state.korName.trim(),
+      mobilePhoneNum : this.state.mobilePhoneNum.trim(),
+      engLastName : this.state.engLastName.trim(),
+      engFirstName : this.state.engFirstName.trim(),
+      affiliation : this.state.affiliation.trim(),
+      position : this.state.position.trim(),
+      advisorName : this.state.advisorName.trim(),
+      willPresentPoster : this.state.willPresentPoster
+    }, (err, res) => {
+      if (err) {
+        event.preventDefault();
+        alert(err);
+      } else {
+        // success!
+      }
+    });
 
-    console.log(ticket);
-
-    Meteor.call('tickets.insertKor', ticket);
-    alert("submitted!");
   }
 
   handleNonKorOnSubmit(event) {
-    event.preventDefault();
+    // event.preventDefault();
 
-    ticket = {
+    Meteor.call('tickets.insertNonKor', {
       isKorean : false,
       email : Meteor.user().emails[0].address,
-      nationality : this.state.userNonKorSpec.nationality.trim(),
-      engLastName : this.state.userCommon.engLastName.trim(),
-      engFirstName : this.state.userCommon.engFirstName.trim(),
-      affliation : this.state.userCommon.affliation.trim(),
-      position : this.state.userCommon.position.trim(),
-      advisorName : this.state.userCommon.advisorName.trim(),
-      isPresentPoster : this.state.userCommon.isPresentPoster
-    }
-
-    console.log(ticket);
-
-    Meteor.call('tickets.insertNonKor', ticket);
-  }
-
-  sendCommonUser(_state) {
-    this.setState({
-      userCommon : _state
-    })
-  }
-
-  sendKorUser(_state) {
-    this.setState({
-      userKorSpec : _state
-    })
-  }
-
-  sendNonKorUser(_state) {
-    this.setState({
-      userNonKorSpec : _state
-    })
+      nationality : this.state.nationality.trim(),
+      engLastName : this.state.engLastName.trim(),
+      engFirstName : this.state.engFirstName.trim(),
+      affiliation : this.state.affiliation.trim(),
+      position : this.state.position.trim(),
+      advisorName : this.state.advisorName.trim(),
+      willPresentPoster : this.state.willPresentPoster
+    }, (err, res) => {
+      if (err) {
+        event.preventDefault();
+        alert(err);
+      } else {
+        // success!
+      }
+    });
   }
 
   render() {
@@ -140,17 +126,17 @@ export class GetTicketForm extends Tracker.Component {
                 </ButtonToolbar>
               </Row>
               {
-                this.state.isKorean && !this.state.isNonKorean && <Form>
-                    <RegisterPollFormKor sendRegisterKorUser={ this.sendKorUser.bind(this) } />
-                    <RegisterPollFormCommon sendRegisterCommonUser={ this.sendCommonUser.bind(this) } />
-                    <Button bsSize="large" block type="submit" onSubmit={ this.handleKorOnSubmit.bind(this) }> 제출 및 결제하기 </Button>
+                this.state.isKorean && !this.state.isNonKorean && <Form onSubmit={ this.handleKorOnSubmit.bind(this) }>
+                    <RegisterPollFormKor onChange={ this.handleOnChange.bind(this) } />
+                    <RegisterPollFormCommon onChange={ this.handleOnChange.bind(this) } />
+                    <Button bsSize="large" block type="submit"> 제출 및 결제하기 </Button>
                   </Form>
               }
               {
-                this.state.isNonKorean && !this.state.isKorean && <Form>>
-                  <RegisterPollFormNonKor sendRegisterNonKorUser={ this.sendNonKorUser.bind(this) } />
-                  <RegisterPollFormCommon sendRegisterCommonUser={ this.sendCommonUser.bind(this) } />
-                  <Button bsSize="large" block type="submit" onSubmit={ this.handleKorOnSubmit.bind(this) }> Submit  </Button>
+                !this.state.isKorean && this.state.isNonKorean && <Form onSubmit={ this.handleKorOnSubmit.bind(this) } >
+                  <RegisterPollFormNonKor onChange={ this.handleOnChange.bind(this) } />
+                  <RegisterPollFormCommon onChange={ this.handleOnChange.bind(this) } />
+                  <Button bsSize="large" block type="submit"> Submit  </Button>
                 </Form>
               }
               </section>
