@@ -32,7 +32,8 @@ export class GetTicketForm extends Tracker.Component {
       affiliation : '',
       position : '',
       advisorName : '',
-      willPresentPoster : false
+      willPresentPoster : false,
+      iamportLoaded : false
     };
     this.autorun(() => {
       this.setState({
@@ -56,33 +57,73 @@ export class GetTicketForm extends Tracker.Component {
   }
 
   handleKorOnSubmit(event) {
-    // event.preventDefault();
+    event.preventDefault();
 
-    Meteor.call('tickets.insertKor', {
-      isKorean : true,
-      email : Meteor.user().emails[0].address,
-      agreedKoreanPrivacyPolicy : this.state.agreedKoreanPrivacyPolicy,
-      korName : this.state.korName.trim(),
-      mobilePhoneNum : this.state.mobilePhoneNum.trim(),
-      engLastName : this.state.engLastName.trim(),
-      engFirstName : this.state.engFirstName.trim(),
-      affiliation : this.state.affiliation.trim(),
-      position : this.state.position.trim(),
-      advisorName : this.state.advisorName.trim(),
-      willPresentPoster : this.state.willPresentPoster
-    }, (err, res) => {
-      if (err) {
-        event.preventDefault();
-        alert(err);
-      } else {
-        // success!
-      }
-    });
+    if (!this.state.iamportLoaded) {
+      alert("Failed to load scripts, please refresh page.");
+    } else {
+      IMP.request_pay({
+        pg : 'uplus',
+        pay_method : 'card',
+        merchant_uid : 'merchant_' + new Date().getTime(),
+        name : '주문명:결제테스트',
+        amount : 1000,
+        buyer_email : Meteor.user().emails[0].address,
+        buyer_name : this.state.korName,
+        buyer_tel : this.state.mobilePhoneNum
+      }, function(rsp) {
+          if ( rsp.success ) {
+              var msg = '결제가 완료되었습니다.';
+              msg += '고유ID : ' + rsp.imp_uid;
+              msg += '상점 거래ID : ' + rsp.merchant_uid;
+              msg += '결제 금액 : ' + rsp.paid_amount;
+              msg += '카드 승인번호 : ' + rsp.apply_num;
+              alert(msg);
 
+              Meteor.call('tickets.insertKor', {
+                isKorean : true,
+                email : Meteor.user().emails[0].address,
+                agreedKoreanPrivacyPolicy : this.state.agreedKoreanPrivacyPolicy,
+                korName : this.state.korName.trim(),
+                mobilePhoneNum : this.state.mobilePhoneNum.trim(),
+                engLastName : this.state.engLastName.trim(),
+                engFirstName : this.state.engFirstName.trim(),
+                affiliation : this.state.affiliation.trim(),
+                position : this.state.position.trim(),
+                advisorName : this.state.advisorName.trim(),
+                willPresentPoster : this.state.willPresentPoster
+              }, (err, res) => {
+                if (err) {
+                  alert(err);
+                } else {
+                  // success!
+                  this.navigate('/');
+                }
+              });
+          } else {
+              var msg = '결제에 실패하였습니다.';
+              msg += '에러내용 : ' + rsp.error_msg;
+              alert(msg);
+          }
+      });
+    }
+  }
+
+  handleIamPortCreate (e) {
+    this.setState({ iamportLoaded : false })
+  }
+
+  handleIamPortLoad (e) {
+    IMP.init('imp33162581');
+    this.setState({ iamportLoaded : true })
+  }
+
+  handleIamPortLoadError (e) {
+    alert("Failed to load scripts, please refresh page.");
   }
 
   handleNonKorOnSubmit(event) {
-    // event.preventDefault();
+    event.preventDefault();
 
     Meteor.call('tickets.insertNonKor', {
       isKorean : false,
@@ -100,6 +141,7 @@ export class GetTicketForm extends Tracker.Component {
         alert(err);
       } else {
         // success!
+        alert("You've sucessfully registerd!");
       }
     });
   }
@@ -129,6 +171,12 @@ export class GetTicketForm extends Tracker.Component {
                 this.state.isKorean && !this.state.isNonKorean && <Form onSubmit={ this.handleKorOnSubmit.bind(this) }>
                     <RegisterPollFormKor onChange={ this.handleOnChange.bind(this) } />
                     <RegisterPollFormCommon onChange={ this.handleOnChange.bind(this) } />
+                    <Script
+                      url="https://service.iamport.kr/js/iamport.payment-1.1.2.js"
+                      onError={this.handleIamPortCreate.bind(this)}
+                      onError={this.handleIamPortLoadError.bind(this)}
+                      onLoad={this.handleIamPortLoad.bind(this)}
+                    />
                     <Button bsSize="large" block type="submit"> 제출 및 결제하기 </Button>
                   </Form>
               }
