@@ -4,7 +4,6 @@ import { Grid, Row, Col, Table, Button, ButtonToolbar } from 'react-bootstrap';
 export const Venue = () => (
   <Grid>
     <section className="room">
-      <a name="room" className="anchor"></a>
       <Row><Col xs={12}>
         <h1 className="section-header">Room</h1>
       </Col></Row>
@@ -39,9 +38,17 @@ export const Venue = () => (
           <h2 className="section-subheader">대명리조트 쏘노펠리체</h2>
           <ul>
             <li> 노블리안 실버스위트 (1객실당 방2개, 거실1개) </li>
-            <li>Daemyung Resort, Sonofelice, Noblian Sliver Suite (2 rooms &amp; 1 living room / 1Unit)</li>
-            <li>숙박 및 콘도가격은 사무국으로 문의해주세요. (a3inverse@gmail.com)</li>
+            <li> Daemyung Resort, Sonofelice, Noblian Sliver Suite (2 rooms &amp; 1 living room / 1Unit)</li>
+
           </ul>
+          <ol>
+            <li>  <a href="https://goo.gl/forms/oCcRUR9NisKRsLnh1">Link for reservation :</a></li>
+            <li> 사전등록 및 결제를 하신 분에 한하여 숙소예약이 가능하며, 그렇지 않은 경우 숙소예약이 진행되지 않습니다.</li>
+            <li> 신청서를 제출하시고, 반드시 사무국으로부터 숙소예약에 대한 확약 이메일을 받으시기 바랍니다. </li>
+            <li> 숙소 예약 마감 : 2016년 11월 30일 까지</li>
+            <li> 객실예약 취소 안내 : 취소는 2016년 12월 20일 까지만 가능하오니, 신중히 생각하시어 신청하시기 바랍니다.</li>
+            <li> 문의사항 : a3inverse@gmail.com, 02-2123-6123, 정태욱 </li>
+          </ol>
           <h3 className="section-subsubheader">Homepage</h3>
           <ButtonToolbar>
             <Button href="https://www.daemyungresort.com">Korean</Button>
@@ -53,7 +60,6 @@ export const Venue = () => (
       </Row>
     </section>
     <section className="Transportation">
-      <a name="travel" className="anchor"></a>
       <Row><Col xs={12}>
         <h1 className="section-header">Travel &amp; Transportation</h1>
       </Col></Row>

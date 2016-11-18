@@ -40,8 +40,65 @@ export const Program = () => (
         </Table>
       </Col></Row>
     </section>
+    <section className="special-session">
+      <Row><Col xs={12}>
+        <h1 className="section-header">Special Sessions</h1>
+      </Col></Row>
+      <Row><Col xs={12}>
+        <Table responsive>
+          <thead>
+            <tr>
+              <th>Session</th>
+              <th>Organizer</th>
+              <th>Affiliation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Current issues on X-ray computed tomography imaging</td>
+              <td>Hyoung Suk Park, Jong Chul Ye</td>
+              <td>NIMS, KAIST</td>
+            </tr>
+            <tr>
+              <td>Understanding of Ultrasound Examinations and Applications of Deep Learning</td>
+              <td>Chiyoung Ahn</td>
+              <td>NIMS </td>
+            </tr>
+            <tr>
+              <td>A tutorial on microwave imaging technique</td>
+              <td>Won-Kwang Park</td>
+              <td>	Kookmin University</td>
+            </tr>
+            <tr>
+              <td>국가수리과학연구소 내에서의 과제 소개</td>
+              <td>Taeyoung Ha</td>
+              <td>NIMS</td>
+            </tr>
+            <tr>
+              <td>A3 Meeting</td>
+              <td>Jin Keun Seo</td>
+              <td>Yonsei University</td>
+            </tr>
+          </tbody>
+        </Table>
+      </Col></Row>
+    <Row>
+      <Col xs={12}>
+        <h2 className="section-subheader">Session Poster</h2>
+      </Col>
+    </Row>
+    <Row>
+      <Col xs={12}>
+        <ul>
+          <li><a href="/public/special/hsp.pdf">Session Poster : Current issues on X-ray computed tomography imaging</a></li>
+          <li><a href="/public/special/cya.pdf">Session Poster : Understanding of Ultrasound Examinations and Applications of Deep Learning</a></li>
+          <li><a href="/public/special/wkp.pdf">Session Poster : A tutorial on microwave imaging technique</a></li>
+          <li><a href="/public/special/tyh.pdf">Session Poster : 국가수리과학연구소 내에서의 과제 소개</a></li>
+        </ul>
+      </Col>
+    </Row>
+    </section>
     <section className="speakers">
-      <a name="speakers" className="anchor"></a>
       <Row><Col xs={12}>
         <h1 className="section-header">Speakers</h1>
       </Col></Row>
@@ -124,5 +181,5 @@ export const Program = () => (
         </Table>
       </Col></Row>
     </section>
-      </Grid>
+  </Grid>
 )

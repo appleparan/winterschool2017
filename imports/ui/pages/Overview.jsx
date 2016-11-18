@@ -26,6 +26,11 @@ export const Overview = () => (
                 and the visualization of real-world problems for students and researchers.</p>
           </ul>
         </Col></Row>
+        <Row>
+          <Col xs={12}>
+            <h2 className="section-subheader"><a href="/public/official-docs/winterschool2017_poster.pdf">Poster</a></h2>
+          </Col>
+        </Row>
         <Row><Col xs={12}>
           <img className="img-responsive" src="/img/logo.jpg" alt="" />
         </Col></Row>
