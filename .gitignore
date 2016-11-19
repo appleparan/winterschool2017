@@ -1,0 +1,8 @@
+node_modules/
+.DS_Store
+.*swp
+
+# ignore because of security reasons
+settings.json
+mail-url.js
+imports/startup/server/settings
