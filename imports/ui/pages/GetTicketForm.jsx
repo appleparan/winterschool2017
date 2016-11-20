@@ -12,6 +12,7 @@ import ReactDOM, { findDOMNode } from 'react-dom';
 import { IndexLink, Link, browserHistory } from 'react-router';
 import { IndexLinkContainer, LinkContainer } from 'react-router-bootstrap';
 import Script from 'react-load-script';
+import Popup from 'react-popup';
 import Tracker from 'tracker-component';
 
 import { RegisterPollFormKor, RegisterPollFormNonKor, RegisterPollFormCommon } from './RegisterPollForm.jsx';
@@ -78,11 +79,11 @@ export class GetTicketForm extends Tracker.Component {
               msg += '상점 거래ID : ' + rsp.merchant_uid;
               msg += '결제 금액 : ' + rsp.paid_amount;
               msg += '카드 승인번호 : ' + rsp.apply_num;
-              alert(msg);
+              Popup.alert(msg);
+              Popup.alert('You have paid registration fee, click ok to submit information to server');
 
               Meteor.call('tickets.insertKor', {
                 isKorean : true,
-                email : Meteor.user().emails[0].address,
                 agreedKoreanPrivacyPolicy : this.state.agreedKoreanPrivacyPolicy,
                 korName : this.state.korName.trim(),
                 mobilePhoneNum : this.state.mobilePhoneNum.trim(),
@@ -97,7 +98,8 @@ export class GetTicketForm extends Tracker.Component {
                   alert(err);
                 } else {
                   // success!
-                  this.navigate('/');
+                  Popup.alert('You have succefully registred!');
+                  browserHistory.push('/');
                 }
               });
           } else {
@@ -127,7 +129,6 @@ export class GetTicketForm extends Tracker.Component {
 
     Meteor.call('tickets.insertNonKor', {
       isKorean : false,
-      email : Meteor.user().emails[0].address,
       nationality : this.state.nationality.trim(),
       engLastName : this.state.engLastName.trim(),
       engFirstName : this.state.engFirstName.trim(),
@@ -181,7 +182,7 @@ export class GetTicketForm extends Tracker.Component {
                   </Form>
               }
               {
-                !this.state.isKorean && this.state.isNonKorean && <Form onSubmit={ this.handleKorOnSubmit.bind(this) } >
+                !this.state.isKorean && this.state.isNonKorean && <Form onSubmit={ this.handleNonKorOnSubmit.bind(this) } >
                   <RegisterPollFormNonKor onChange={ this.handleOnChange.bind(this) } />
                   <RegisterPollFormCommon onChange={ this.handleOnChange.bind(this) } />
                   <Button bsSize="large" block type="submit"> Submit  </Button>
