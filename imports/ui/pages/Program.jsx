@@ -90,10 +90,10 @@ export const Program = () => (
     <Row>
       <Col xs={12}>
         <ul>
-          <li><a href="/public/special/hsp.pdf">Session Poster : Current issues on X-ray computed tomography imaging</a></li>
-          <li><a href="/public/special/cya.pdf">Session Poster : Understanding of Ultrasound Examinations and Applications of Deep Learning</a></li>
-          <li><a href="/public/special/wkp.pdf">Session Poster : A tutorial on microwave imaging technique</a></li>
-          <li><a href="/public/special/tyh.pdf">Session Poster : 국가수리과학연구소 내에서의 과제 소개</a></li>
+          <li><a href="/special/hsp.pdf">Session Poster : Current issues on X-ray computed tomography imaging</a></li>
+          <li><a href="/special/cya.pdf">Session Poster : Understanding of Ultrasound Examinations and Applications of Deep Learning</a></li>
+          <li><a href="/special/wkp.pdf">Session Poster : A tutorial on microwave imaging technique</a></li>
+          <li><a href="/special/tyh.pdf">Session Poster : 국가수리과학연구소 내에서의 과제 소개</a></li>
         </ul>
       </Col>
     </Row>

@@ -28,7 +28,7 @@ export const Overview = () => (
         </Col></Row>
         <Row>
           <Col xs={12}>
-            <h2 className="section-subheader"><a href="/public/official-docs/winterschool2017_poster.pdf">Poster</a></h2>
+            <h2 className="section-subheader"><a href="/official-docs/winterschool2017_poster.pdf">Poster</a></h2>
           </Col>
         </Row>
         <Row><Col xs={12}>
