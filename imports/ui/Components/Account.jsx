@@ -6,7 +6,7 @@ import { browserHistory } from 'react-router';
 import { Grid, Row, Col } from 'react-bootstrap';
 import Tracker from 'tracker-component';
 
-import { GetTicketForm } from '/imports/ui/pages/GetTicketForm.jsx';
+import { GetTicketForm } from '/imports/ui/Pages/GetTicketForm.jsx';
 
 export class Profile extends Tracker.Component {
   constructor(props) {

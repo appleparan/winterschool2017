@@ -5,20 +5,20 @@ import { Router, Route, browserHistory, IndexRoute } from 'react-router';
 import { Accounts, STATES } from 'meteor/std:accounts-basic';
 
 // import styles
-import '/imports/ui/styles/winterschool2017.scss';
+import '/imports/ui/Styles/winterschool2017.scss';
 
 // Layouts
-import { AppContainer } from '/imports/ui/containers/AppContainer.jsx';
+import { AppContainer } from '/imports/ui/Containers/AppContainer.jsx';
 
 // Pages
-import { Overview } from  '/imports/ui/pages/Overview.jsx';
-import { Program } from  '/imports/ui/pages/Program.jsx';
-import { Schedule } from  '/imports/ui/pages/Schedule.jsx';
-import { Venue } from  '/imports/ui/pages/Venue.jsx';
+import { Overview } from  '/imports/ui/Pages/Overview.jsx';
+import { Program } from  '/imports/ui/Pages/Program.jsx';
+import { Schedule } from  '/imports/ui/Pages/Schedule.jsx';
+import { Venue } from  '/imports/ui/Pages/Venue.jsx';
 
-import { RegisterInfo } from '/imports/ui/pages/Register.jsx'
-import { GetTicketForm } from '/imports/ui/pages/GetTicketForm.jsx'
-import { RegisterSuccess } from '/imports/ui/pages/RegisterSuccess.jsx'
+import { RegisterInfo } from '/imports/ui/Pages/Register.jsx'
+import { GetTicketForm } from '/imports/ui/Pages/GetTicketForm.jsx'
+import { RegisterSuccess } from '/imports/ui/Pages/RegisterSuccess.jsx'
 import { SignIn, SignUp, Profile, PasswordReset } from '/imports/ui/Components/Account.jsx'
 
 Meteor.startup( () => {
