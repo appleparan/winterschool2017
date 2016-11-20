@@ -9,6 +9,7 @@
     "bcrypt": "^0.8.7",
     "chance": "^1.0.4",
     "iamport": "^0.2.5",
+    "invariant": "^2.2.2",
     "meteor-node-stubs": "^0.2.4",
     "react": "^15.4.0",
     "react-addons-pure-render-mixin": "^15.4.0",
