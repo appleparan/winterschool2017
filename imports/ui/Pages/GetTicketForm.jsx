@@ -107,6 +107,11 @@ export class GetTicketForm extends Tracker.Component {
                   browserHistory.push('/profile');
                 }
               } else {
+                // cancel payment
+                iamport.payment.cancel({
+                  imp_uid: rsp.imp_uid
+                });
+
                 var msg = '결제과 완료되지 않았습니다. 다시 결제하여 주십시요.';
                 Alert.error(msg, {
                   position: 'top'
