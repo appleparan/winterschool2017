@@ -18,7 +18,6 @@ import { Venue } from  '/imports/ui/Pages/Venue.jsx';
 
 import { RegisterInfo } from '/imports/ui/Pages/Register.jsx'
 import { GetTicketForm } from '/imports/ui/Pages/GetTicketForm.jsx'
-import { RegisterSuccess } from '/imports/ui/Pages/RegisterSuccess.jsx'
 import { SignIn, SignUp, Profile, PasswordReset } from '/imports/ui/Components/Account.jsx'
 
 Meteor.startup( () => {
@@ -30,7 +29,6 @@ Meteor.startup( () => {
         <Route path="schedule" component={ Schedule } />
         <Route path="venue" component={ Venue } />
         <Route path="register" component={ RegisterInfo } />
-        // <Route path="registered" component={ RegisterSuccess } />
         <Route path="getticket" component={ GetTicketForm} />
         <Route path="signin" component={ SignIn } />
         <Route path="signup" component={ SignUp } />
