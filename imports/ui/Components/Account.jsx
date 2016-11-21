@@ -5,11 +5,11 @@ import { Tracker } from 'meteor/tracker';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { browserHistory } from 'react-router';
-import { Grid, Row, Col } from 'react-bootstrap';
+import { Grid, Row, Col, Button } from 'react-bootstrap';
 import TrackerComponent from 'tracker-component';
 
 import { GetTicketForm } from '/imports/ui/Pages/GetTicketForm.jsx';
-import { ProfileRegisterationInfo } from '/imports/ui/Pages/RegisterationInfo.jsx';
+import { ProfileRegistrationInfo } from '/imports/ui/Pages/RegistrationInfo.jsx';
 import { compose } from 'react-komposer';
 
 import { Tickets } from '/api/ticket/ticket.jsx';
@@ -55,7 +55,8 @@ class ProfileConditional extends React.Component {
         <Grid>
           <Row>
             <Accounts.ui.LoginForm formState={ STATES.PROFILE } />
-            <ProfileRegisterationInfo ticket={ this.props.ticket } />
+            <ProfileRegistrationInfo ticket={ this.props.ticket } />
+            <Button bsStyle="Info"> Download Registration Certification (will be avilable soon)</Button>
           </Row>
         </Grid>
       )

@@ -75,7 +75,7 @@ class ProfileInfo extends React.Component {
   }
 }
 
-export class ProfileRegisterationInfo extends React.Component {
+export class ProfileRegistrationInfo extends React.Component {
   constructor(props) {
    super(props);
   }
