@@ -49,6 +49,7 @@ const options = {
       </Row>
     </Grid> )
 };
+
 // <Loading type='spinningBubbles' color='#e3e3e3' width='300' height='300' />
 class ProfileConditional extends React.Component {
   constructor(props) {
@@ -84,19 +85,17 @@ const ProfileConditionalContainer = compose(getTrackerLoader(reactiveMapper), op
 export class Profile extends TrackerComponent.Component {
   constructor(props) {
     super(props);
-    var _isAuthenticated = false;
-    if (Meteor.user()) {
-      _isAuthenticated = true;
-    }
 
     this.autorun(() => {
      this.setState({
-       isAuthenticated: _isAuthenticated
+       isAuthenticated: Meteor.user()
      });
     });
+  }
 
-    if (!_isAuthenticated) {
-     browserHistory.push('/signin');
+  componentWillMount() {
+    if (!this.state.isAuthenticated) {
+      browserHistory.push('/signin');
     }
   }
 
