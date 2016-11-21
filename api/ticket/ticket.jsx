@@ -8,6 +8,7 @@ export const Tickets = new Mongo.Collection('tickets');
 Meteor.methods({
   'tickets.insertKor'({
     isKorean,
+    isPaid,
     agreedKoreanPrivacyPolicy,
     korName,
     mobilePhoneNum,
@@ -16,7 +17,8 @@ Meteor.methods({
     affiliation,
     position,
     advisorName,
-    willPresentPoster }) {
+    willPresentPoster
+    }) {
 
       var mobileRegExp = /^\d{3}-\d{3,4}-\d{4}$/;
       new SimpleSchema({
@@ -24,6 +26,7 @@ Meteor.methods({
         owner: { type: String, regEx: SimpleSchema.RegEx.Id },
         email : { type: String, regEx: SimpleSchema.RegEx.Email },
         isKorean : { type: Boolean },
+        isPaid : { type: Boolean },
         engLastName : { type: String },
         engFirstName : { type: String },
         affiliation : { type: String  },
@@ -54,7 +57,8 @@ Meteor.methods({
         createdAt: new Date(),
         owner: Meteor.userId(),
         email : Meteor.user().emails[0].address,
-        isKorean: isKorean,
+        isKorean : isKorean,
+        isPaid : isPaid,
         agreedKoreanPrivacyPolicy : agreedKoreanPrivacyPolicy,
         korName : korName,
         mobilePhoneNum : mobilePhoneNum,
@@ -68,6 +72,7 @@ Meteor.methods({
   },
   'tickets.insertNonKor'({
     isKorean,
+    isPaid,
     nationality,
     engLastName,
     engFirstName,
@@ -80,8 +85,9 @@ Meteor.methods({
         createdAt: { type: Date },
         owner: { type: String, regEx: SimpleSchema.RegEx.Id },
         email : { type: String, regEx: SimpleSchema.RegEx.Email },
-        isKorean: { type: Boolean },
-        nationality: { type: String },
+        isKorean : { type: Boolean },
+        isPaid : { type: Boolean },
+        nationality : { type: String },
         engLastName : { type: String },
         engFirstName : { type: String },
         affiliation : { type: String  },
@@ -103,9 +109,10 @@ Meteor.methods({
 
       Tickets.insert({
         createdAt: new Date(),
-        owner: Meteor.userId(),
+        owner : Meteor.userId(),
         email : Meteor.user().emails[0].address,
-        isKorean: isKorean,
+        isKorean : isKorean,
+        isPaid : isPaid,
         nationality : nationality,
         engLastName : engLastName,
         engFirstName : engFirstName,
