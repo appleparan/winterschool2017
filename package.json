@@ -18,6 +18,7 @@
     "react-fontawesome": "^1.4.0",
     "react-komposer": "^2.0.0",
     "react-load-script": "0.0.2",
+    "react-loading": "0.0.9",
     "react-meteor-data": "^0.2.9",
     "react-mounter": "^1.2.0",
     "react-popup": "^0.4.2",

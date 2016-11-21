@@ -6,11 +6,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { browserHistory } from 'react-router';
 import { Grid, Row, Col, Button } from 'react-bootstrap';
+import { compose } from 'react-komposer';
+import { Loading } from 'react-loading';
 import TrackerComponent from 'tracker-component';
 
 import { GetTicketForm } from '/imports/ui/Pages/GetTicketForm.jsx';
 import { ProfileRegistrationInfo } from '/imports/ui/Pages/RegistrationInfo.jsx';
-import { compose } from 'react-komposer';
 
 import { Tickets } from '/api/ticket/ticket.jsx';
 
@@ -41,9 +42,14 @@ function reactiveMapper(props, onData) {
 }
 
 const options = {
-  loadingHandler: () => (<h1>Loading...</h1>)
+  loadingHandler: () => (
+    <Grid>
+      <Row>
+        Loading....
+      </Row>
+    </Grid> )
 };
-
+// <Loading type='spinningBubbles' color='#e3e3e3' width='300' height='300' />
 class ProfileConditional extends React.Component {
   constructor(props) {
     super(props);
@@ -56,7 +62,7 @@ class ProfileConditional extends React.Component {
           <Row>
             <Accounts.ui.LoginForm formState={ STATES.PROFILE } />
             <ProfileRegistrationInfo ticket={ this.props.ticket } />
-            <Button bsStyle="Info"> Download Registration Certification (will be avilable soon)</Button>
+            <Button bsStyle="info"> Download Registration Certification (will be avilable soon) </Button>
           </Row>
         </Grid>
       )
