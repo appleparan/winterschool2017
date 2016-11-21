@@ -67,7 +67,7 @@ export class GetTicketForm extends Tracker.Component {
         pay_method : 'card',
         merchant_uid : 'merchant_' + new Date().getTime(),
         name : '주문명:결제테스트',
-        amount : 1000,
+        amount : 200000,
         buyer_email : Meteor.user().emails[0].address,
         buyer_name : this.state.korName,
         buyer_tel : this.state.mobilePhoneNum
