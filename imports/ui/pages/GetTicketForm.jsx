@@ -16,7 +16,6 @@ import Popup from 'react-popup';
 import Tracker from 'tracker-component';
 
 import { RegisterPollFormKor, RegisterPollFormNonKor, RegisterPollFormCommon } from './RegisterPollForm.jsx';
-// import { EmailForm } from './EmailVerification.jsx';
 
 export class GetTicketForm extends Tracker.Component {
   constructor(props) {
@@ -99,7 +98,7 @@ export class GetTicketForm extends Tracker.Component {
                 } else {
                   // success!
                   Popup.alert('You have succefully registred!');
-                  browserHistory.push('/');
+                  browserHistory.push('/profile');
                 }
               });
           } else {
