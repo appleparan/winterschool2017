@@ -31,3 +31,4 @@ aldeed:collection2
 accounts-ui@1.1.9
 std:accounts-ui
 std:accounts-basic
+deanius:promise

@@ -1,8 +1,9 @@
- import { check, Match } from 'meteor/check';
-// import { Accounts } from 'meteor/std:accounts-bootstrap';
+import { Meteor } from 'meteor/meteor';
+import { check, Match } from 'meteor/check';
 import { Accounts } from 'meteor/std:accounts-ui';
-// import { Accounts } from 'meteor/accounts-base';
+import 'meteor/deanius:promise';
 
+import { Promise } from 'bluebird';
 import React from 'react';
 import { Grid, Row, Col, Table, Button, ButtonToolbar, Well,
     Form, FormGroup, FormControl, ControlLabel, HelpBlock,
@@ -13,7 +14,6 @@ import { IndexLink, Link, browserHistory } from 'react-router';
 import { IndexLinkContainer, LinkContainer } from 'react-router-bootstrap';
 import Script from 'react-load-script';
 import Tracker from 'tracker-component';
-import Iamport from 'iamport';
 
 import Alert from 'react-s-alert';
 
@@ -43,14 +43,22 @@ export class GetTicketForm extends Tracker.Component {
       affiliation : '',
       position : '',
       advisorName : '',
-      willPresentPoster : false,
-      iamportLoaded : false
+      willPresentPoster : false
     };
     this.autorun(() => {
       this.setState({
         isAuthenticated: Meteor.user()
       });
     });
+  }
+
+  handleIamPortOnLoad() {
+    IMP.init('imp33162581');
+  }
+
+  handleIamPortOnError(err) {
+    var msg = '결제 모듈을 불러오지 못했습니다. ';
+    alert(msg + err);
   }
 
   handleKor(event) {
@@ -70,122 +78,135 @@ export class GetTicketForm extends Tracker.Component {
   handleKorOnSubmit(event) {
     event.preventDefault();
 
-    const fee_amount = 1000;
-    var iamport = new Iamport({
-      impKey: process.env.IAMPORT_KEY,
-      impSecret: process.env.IAMPORT_SECRET
-    });
-    // Cannot read property 'agreedKoreanPrivacyPolicy' of undefined(…)
-    if (!this.state.iamportLoaded || iamport == undefined) {
-      Alert.error('Failed to load scripts, please refresh page.', {
-        position: 'top'
+    const _amount = 1000;
+    const _merchant_uid = new Date().getTime();
+
+    // promisified reqeust_pay
+    function IMPrequestPay(param){
+      return new Promise(function(resolve, reject){
+         IMP.request_pay(param, function(rsp) {
+           if (rsp.success) {
+             resolve(rsp);
+           }
+           return reject(new Error(rsp.error_msg));
+         });
       });
-    } else {
-      IMP.request_pay({
+    }
+
+    Meteor.callPromise('iamport.prerpareValidation', {
+      merchant_uid : _merchant_uid,
+      amount : _amount
+    })
+    .then(() => {
+      return IMPrequestPay({
         pg : 'uplus',
         pay_method : 'card',
-        merchant_uid : 'merchant_' + new Date().getTime(),
+        merchant_uid : _merchant_uid,
         name : '2017 Winter School in Imaging Science',
-        amount : fee_amount,
+        amount : _amount,
         buyer_email : Meteor.user().emails[0].address,
         buyer_name : this.state.korName,
         buyer_tel : this.state.mobilePhoneNum
-      }, function(rsp) {
-          if ( rsp.success ) {
-            // 아임포트 고유 아이디로 결제 정보를 조회
-            iamport.payment.getByImpUid({
-              imp_uid: rsp.imp_uid
-            }).then(function(result) {
-              if (result.response.status == 'paid' && amount == fee_amount) {
-                var msg = '결제가 완료되었습니다.';
-                msg += '결제 금액 : ' + rsp.paid_amount;
-                Alert.info(msg, {
-                  position: 'top'
-                });
-
-                if (_submitKorForm(true)) {
-                  browserHistory.push('/profile');
-                }
-              } else {
-                // cancel payment
-                iamport.payment.cancel({
-                  imp_uid: rsp.imp_uid
-                });
-
-                var msg = '결제과 완료되지 않았습니다. 다시 결제하여 주십시요.';
-                Alert.error(msg, {
-                  position: 'top'
-                });
-                alert(msg);
-
-                if (_submitKorForm(false)) {
-                  browserHistory.push('/profile');
-                }
-              }
-            }).catch(function(error){
-              console.log(error);
-            });
-          } else {
-              var msg = '결제에 실패하였습니다.';
-              msg += '에러내용 : ' + rsp.error_msg;
-              Alert.error(msg, {
-                position: 'top'
-              });
-              alert(msg);
-          }
+      })
+    })
+    .then((rsp) => {
+      return Meteor.callPromise('iamport.checkPaymentValid', {
+        merchant_uid : _merchant_uid
+      })
+    })
+    .then(() => {
+      return Meteor.callPromise('tickets.insertKor', {
+        isKorean : true,
+        isPaid : true,
+        agreedKoreanPrivacyPolicy : this.state.agreedKoreanPrivacyPolicy,
+        korName : this.state.korName.trim(),
+        mobilePhoneNum : this.state.mobilePhoneNum.trim(),
+        engLastName : this.state.engLastName.trim(),
+        engFirstName : this.state.engFirstName.trim(),
+        affiliation : this.state.affiliation.trim(),
+        position : this.state.position.trim(),
+        advisorName : this.state.advisorName.trim(),
+        willPresentPoster : this.state.willPresentPoster
       });
-    }
-  }
+    })
+    .then(() => {
+      var msg = '등록에 성공하였습니다.';
+      msg += '결제 금액 : ' + rsp.paid_amount;
+      alert(msg);
+      done();
+    })
+    .catch(() => {
+      console.log.bind(console);
 
-  _submitKorForm (_isPaid) {
-    Meteor.call('tickets.insertKor', {
-      isKorean : true,
-      isPaid : _isPaid,
-      agreedKoreanPrivacyPolicy : this.state.agreedKoreanPrivacyPolicy,
-      korName : this.state.korName.trim(),
-      mobilePhoneNum : this.state.mobilePhoneNum.trim(),
-      engLastName : this.state.engLastName.trim(),
-      engFirstName : this.state.engFirstName.trim(),
-      affiliation : this.state.affiliation.trim(),
-      position : this.state.position.trim(),
-      advisorName : this.state.advisorName.trim(),
-      willPresentPoster : this.state.willPresentPoster
-    }, (err, res) => {
-      if (err) {
-        // success!
-        Alert.info("You failed registration!", {
-          position: 'top'
-        });
+      Meteor.callPromise('iamport.cancelPayment', {
+        merchant_uid : _merchant_uid
+      });
+    });
 
-        return false;
+    /*
+    IMP.request_pay({
+      pg : 'uplus',
+      pay_method : 'card',
+      merchant_uid : _merchant_uid,
+      name : '2017 Winter School in Imaging Science',
+      amount : _amount,
+      buyer_email : Meteor.user().emails[0].address,
+      buyer_name : this.state.korName,
+      buyer_tel : this.state.mobilePhoneNum
+    }, function(rsp) {
+      if ( rsp.success ) {
+        Meteor.callPromise('iamport.checkPaymentValid', {
+          merchant_uid : _merchant_uid,
+          paidAmount: rsp.paid_amount
+        })
+        .then(() => {
+          return Meteor.callPromise('tickets.insertKor', {
+            isKorean : true,
+            isPaid : true,
+            agreedKoreanPrivacyPolicy : this.state.agreedKoreanPrivacyPolicy,
+            korName : this.state.korName.trim(),
+            mobilePhoneNum : this.state.mobilePhoneNum.trim(),
+            engLastName : this.state.engLastName.trim(),
+            engFirstName : this.state.engFirstName.trim(),
+            affiliation : this.state.affiliation.trim(),
+            position : this.state.position.trim(),
+            advisorName : this.state.advisorName.trim(),
+            willPresentPoster : this.state.willPresentPoster
+          });
+        })
+        .then(() => {
+          var msg = '등록에 성공하였습니다.';
+          msg += '결제 금액 : ' + rsp.paid_amount;
+          alert(msg);
+          done();
+        })
+        .catch((err) => {
+          var msg = '검증이 실패했습니다. 다시 결제하여 주세요. ';
+          alert(msg + err);
+          window.location.reload(true);
+        })
+        .catch((err) => {
+          var msg = '등록이 실패하였습니다. 처음부터 다시 시작해주세요. ';
+          alert(msg + err);
+
+          return Meteor.callPromise('iamport.cancelPayment', {
+            merchant_uid : _merchant_uid
+          })
+        })
+        .catch((err) => {
+          var msg = '결제를 취소하지 못했습니다. 담당자에게 연락해주세요. ';
+          alert(msg + err);
+          done();
+        })
+
       } else {
-        // success!
-        Alert.info("You've succefully registred!", {
-          position: 'top'
-        });
-
-        return true;
+        var msg = '결제에 실패하였습니다. 다시 시도해주세요. ';
+        msg += '에러내용 : ' + rsp.error_msg;
+        alert(msg);
+        // window.location.reload(true);
       }
     });
-
-    return false;
-  }
-
-  handleIamPortCreate (e) {
-    this.setState({ iamportLoaded : false })
-  }
-
-  handleIamPortLoad (e) {
-    IMP.init('imp33162581');
-
-    this.setState({ iamportLoaded : true })
-  }
-
-  handleIamPortLoadError (e) {
-    Alert.error("Failed to load scripts, please refresh page.", {
-      position: 'top'
-    });
-
+    */
   }
 
   handleNonKorOnSubmit(event) {
@@ -241,12 +262,6 @@ export class GetTicketForm extends Tracker.Component {
                 this.state.isKorean && !this.state.isNonKorean && <Form onSubmit={ this.handleKorOnSubmit.bind(this) }>
                     <RegisterPollFormKor onChange={ this.handleOnChange.bind(this) } />
                     <RegisterPollFormCommon onChange={ this.handleOnChange.bind(this) } />
-                    <Script
-                      url="https://service.iamport.kr/js/iamport.payment-1.1.2.js"
-                      onError={this.handleIamPortCreate.bind(this)}
-                      onError={this.handleIamPortLoadError.bind(this)}
-                      onLoad={this.handleIamPortLoad.bind(this)}
-                    />
                     <Button bsSize="large" block type="submit"> 제출 및 결제하기 </Button>
                   </Form>
               }
@@ -257,10 +272,16 @@ export class GetTicketForm extends Tracker.Component {
                   <Button bsSize="large" block type="submit"> Submit  </Button>
                 </Form>
               }
+              <Script
+                url="https://service.iamport.kr/js/iamport.payment-1.1.2.js"
+                onError={ this.handleIamPortOnError.bind(this) }
+                onLoad={ this.handleIamPortOnLoad.bind(this) }
+              />
               </section>
          </Well>
         </Col>
       </Row>
+
       <Alert stack={{limit: 3}} />
     </Grid>
     )

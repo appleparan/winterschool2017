@@ -17,12 +17,10 @@ class ProfileInfo extends React.Component {
     return (
       <Table>
         <thead>
-          <th>
-            Name
-          </th>
-          <th>
-            Value
-          </th>
+          <tr>
+          <th> Name </th>
+          <th> Value </th>
+          </tr>
         </thead>
         <tbody>
           { this.props.ticket.isKorean &&
@@ -81,7 +79,6 @@ export class ProfileRegistrationInfo extends React.Component {
   }
 
   render() {
-    console.log(this.props.ticket);
     return(
       <ProfileInfo ticket={ this.props.ticket } />
     )
