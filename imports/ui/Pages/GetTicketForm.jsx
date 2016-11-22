@@ -78,7 +78,7 @@ export class GetTicketForm extends Tracker.Component {
   handleKorOnSubmit(event) {
     event.preventDefault();
 
-    const _amount = 1000;
+    const _amount = Meteor.settings.public.IAMPORT_FEE_AMOUNT;
     const _merchant_uid = new Date().getTime();
 
     // promisified reqeust_pay
