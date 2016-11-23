@@ -67,7 +67,7 @@ export const Program = () => (
             <tr>
               <td>A tutorial on microwave imaging technique</td>
               <td>Won-Kwang Park</td>
-              <td>	Kookmin University</td>
+              <td>Kookmin University</td>
             </tr>
             <tr>
               <td>국가수리과학연구소 내에서의 과제 소개</td>
@@ -102,80 +102,119 @@ export const Program = () => (
       <Row><Col xs={12}>
         <h1 className="section-header">Speakers</h1>
       </Col></Row>
+      <p> Ordered by last name. </p>
       <Row><Col xs={12}>
         <Table responsive>
           <thead>
             <tr>
-              <th>Session</th>
               <th>Name</th>
+              <th>Session</th>
+              <th>Date</th>
               <th>Affiliation / Position</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>CT (Image Processing / Deep learning / MAR)</td>
-              <td>박형석</td>
+              <td>Yong Eun Chung</td>
+              <td>CT</td>
+              <td>1/10</td>
+              <td>Dept. of Radiology, Yonsei University College of Medicine</td>
+            </tr>
+            <tr>
+              <td>Jiashi Feng</td>
+              <td>CT</td>
+              <td>1/10</td>
+              <td>Dept. of Electrical and Computer Engineering, National University of Singapore</td>
+            </tr>
+            <tr>
+              <td>Yunkyoung Hyon</td>
               <td>NIMS</td>
+              <td>1/9</td>
+              <td>Division of Integrated Mathematics, NIMS</td>
             </tr>
             <tr>
-              <td>Ultrasound (Segmentation / Deep learning)</td>
-              <td>안치영 / 장재성</td>
-              <td>NIMS / 연세대학교</td>
+              <td>Jae Sung Jang</td>
+              <td>Ultrasound</td>
+              <td>1/10</td>
+              <td>Dept. of Computational Science and Engineering, Yonsei University</td>
             </tr>
             <tr>
-              <td>Electrical Impedance Tomography</td>
-              <td>전기완 / 이경훈</td>
-              <td>NIMS / 연세대학교</td>
+              <td>Soonjeong Jo</td>
+              <td>Ultrasound</td>
+              <td>1/10</td>
+              <td>ALPINION MEDICAL SYSTEMS Corporation</td>
             </tr>
             <tr>
-              <td>Microwave Tomography</td>
-              <td>박원광 / 손성호</td>
-              <td>국민대 / ETRI</td>
+              <td>Sol-Lip Kwon</td>
+              <td>Microwave</td>
+              <td>1/11</td>
+              <td>Dept. of Electronics Engineering, Ewha Womans University</td>
             </tr>
             <tr>
-              <td>TBA</td>
-              <td>TBA</td>
-              <td>TBA</td>
+              <td>Ho Kyung Kim</td>
+              <td>CT</td>
+              <td>1/10</td>
+              <td>School of Mechanical Engineering, Pusan National University.</td>
             </tr>
             <tr>
-              <td>TBA</td>
-              <td>TBA</td>
-              <td>TBA</td>
+              <td>Kyungsang Kim</td>
+              <td>CT</td>
+              <td>1/10</td>
+              <td>Radiology Department, Harvard Medical School</td>
             </tr>
             <tr>
-              <td>TBA</td>
-              <td>TBA</td>
-              <td>TBA</td>
+              <td>Hwa Pyung Kim</td>
+              <td>Microwave</td>
+              <td>1/11</td>
+              <td>Dept. of Computational Science and Engineering, Yonsei University</td>
             </tr>
             <tr>
-              <td>TBA</td>
-              <td>TBA</td>
-              <td>TBA</td>
+              <td>Kwang-Jae Lee</td>
+              <td>Microwave</td>
+              <td>1/11</td>
+              <td>Radio Technology Research Department, Electronics and Telecommunications Research Institute (ETRI)</td>
             </tr>
             <tr>
-              <td>TBA</td>
-              <td>TBA</td>
-              <td>TBA</td>
+              <td>Wanho Lee</td>
+              <td>NIMS</td>
+              <td>1/9</td>
+              <td>Division of Integrated Mathematics, NIMS</td>
             </tr>
             <tr>
-              <td>TBA</td>
-              <td>TBA</td>
-              <td>TBA</td>
+              <td>Hyoung Suk Park</td>
+              <td>CT</td>
+              <td>1/9</td>
+              <td>Division of Integrated Mathematics, NIMS</td>
             </tr>
             <tr>
-              <td>TBA</td>
-              <td>TBA</td>
-              <td>TBA</td>
+              <td>Won-Kwang Park</td>
+              <td>Microwave</td>
+              <td>1/11</td>
+              <td>Dept. of Mathematics, Kookmin University</td>
             </tr>
             <tr>
-              <td>TBA</td>
-              <td>TBA</td>
-              <td>TBA</td>
+              <td>Jin Keun Seo</td>
+              <td>CT</td>
+              <td>1/9</td>
+              <td>Dept. of Computational Science and Engineering, Yonsei University</td>
             </tr>
             <tr>
-              <td>TBA</td>
-              <td>TBA</td>
-              <td>TBA</td>
+              <td>Seong-Ho Son</td>
+              <td>Microwave</td>
+              <td>1/11</td>
+              <td>Radio Technology Research Department, Electronics and Telecommunications Research Institute (ETRI)</td>
+            </tr>
+            <tr>
+              <td>HanByul Yang</td>
+              <td>Ultrasound</td>
+              <td>1/10</td>
+              <td>NVIDIA Corporation</td>
+            </tr>
+            <tr>
+              <td>Jung Chul Ye</td>
+              <td>CT</td>
+              <td>1/10</td>
+              <td>Dept. of Bio and Brain Engineering, KAIST</td>
             </tr>
           </tbody>
         </Table>
