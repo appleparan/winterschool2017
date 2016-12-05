@@ -14,6 +14,9 @@ class ProfileInfo extends React.Component {
   }
 
   render() {
+    const willPresentPoster = this.props.ticket.willPresentPoster;
+    console.log(willPresentPoster);
+    console.log(typeof(willPresentPoster));
     return (
       <Table>
         <thead>
@@ -64,7 +67,7 @@ class ProfileInfo extends React.Component {
           <tr>
             <td> Poster Presentation </td>
             <td>
-              { this.props.ticket.willPresentPoster ? <span> Yes </span> : <span> No </span> }
+              { willPresentPoster ? 'Yes' : 'No' }
             </td>
           </tr>
         </tbody>

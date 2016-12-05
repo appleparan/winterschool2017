@@ -1,4 +1,4 @@
-import { SimpleSchema } from 'meteor/aldeed:simple-schema';
+import SimpleSchema from 'simpl-schema';
 
 export const Tickets = new Mongo.Collection('tickets');
 
@@ -6,15 +6,15 @@ Meteor.methods({
   'tickets.insertKor'({
     isKorean,
     isPaid,
-    agreedKoreanPrivacyPolicy,
-    korName,
-    mobilePhoneNum,
     engLastName,
     engFirstName,
     affiliation,
     position,
     advisorName,
-    willPresentPoster
+    willPresentPoster,
+    agreedKoreanPrivacyPolicy,
+    korName,
+    mobilePhoneNum
     }) {
 
       var mobileRegExp = /^\d{3}-\d{3,4}-\d{4}$/;
@@ -29,7 +29,7 @@ Meteor.methods({
         affiliation : { type: String  },
         position : { type: String },
         advisorName : { type: String },
-        willPresentPoster : { type: String },
+        willPresentPoster : { type: Boolean },
         agreedKoreanPrivacyPolicy : { type: String },
         korName : { type: String },
         mobilePhoneNum :  { type: String, regEx: mobileRegExp }
@@ -56,27 +56,27 @@ Meteor.methods({
         email : Meteor.user().emails[0].address,
         isKorean : isKorean,
         isPaid : isPaid,
-        agreedKoreanPrivacyPolicy : agreedKoreanPrivacyPolicy,
-        korName : korName,
-        mobilePhoneNum : mobilePhoneNum,
         engLastName : engLastName,
         engFirstName : engFirstName,
         affiliation : affiliation,
         position : position,
         advisorName : advisorName,
-        willPresentPoster : willPresentPoster
+        willPresentPoster : willPresentPoster,
+        agreedKoreanPrivacyPolicy : agreedKoreanPrivacyPolicy,
+        korName : korName,
+        mobilePhoneNum : mobilePhoneNum
       });
   },
   'tickets.insertNonKor'({
     isKorean,
     isPaid,
-    nationality,
     engLastName,
     engFirstName,
     affiliation,
     position,
     advisorName,
-    willPresentPoster }) {
+    willPresentPoster,
+    nationality }) {
 
       new SimpleSchema({
         createdAt: { type: Date },
@@ -84,13 +84,13 @@ Meteor.methods({
         email : { type: String, regEx: SimpleSchema.RegEx.Email },
         isKorean : { type: Boolean },
         isPaid : { type: Boolean },
-        nationality : { type: String },
         engLastName : { type: String },
         engFirstName : { type: String },
         affiliation : { type: String  },
         position : { type: String },
         advisorName : { type: String },
-        willPresentPoster : { type: String }
+        willPresentPoster : { type: Boolean },
+        nationality : { type: String }
       });
 
       // Make sure the user is logged in before inserting a task
@@ -110,13 +110,13 @@ Meteor.methods({
         email : Meteor.user().emails[0].address,
         isKorean : isKorean,
         isPaid : isPaid,
-        nationality : nationality,
         engLastName : engLastName,
         engFirstName : engFirstName,
         affiliation : affiliation,
         position : position,
         advisorName : advisorName,
-        willPresentPoster : willPresentPoster
+        willPresentPoster : willPresentPoster,
+        nationality : nationality
       });
   },
   'tickets.findMine'() {

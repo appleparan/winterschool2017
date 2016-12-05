@@ -14,12 +14,6 @@ export class RegisterPollFormKor extends Component {
     this.props.onChange(change);
   }
 
-  handleRadioOnChange(name, value) {
-    var change = {};
-    change[name] = value;
-    this.props.onChange(change);
-  }
-
   render() {
     return (
       <div>
@@ -122,12 +116,6 @@ export class RegisterPollFormCommon extends Component {
   handleOnChange(name, e) {
     var change = {};
     change[name] = e.target.value;
-    this.props.onChange(change);
-  }
-
-  handleRadioOnChange(name, value) {
-    var change = {};
-    change[name] = value;
     this.props.onChange(change);
   }
 

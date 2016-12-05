@@ -72,12 +72,13 @@ export class GetTicketForm extends Tracker.Component {
   }
 
   handleOnChange(_change) {
+    // wait for setstate
     this.setState(_change);
   }
 
   handleKorOnSubmit(event) {
     event.preventDefault();
-
+    // no need to setTimeout because it takes to tiem to pay
     const _amount = Meteor.settings.public.IAMPORT_FEE_AMOUNT;
     const _merchant_uid = new Date().getTime();
 
@@ -118,15 +119,15 @@ export class GetTicketForm extends Tracker.Component {
       return Meteor.callPromise('tickets.insertKor', {
         isKorean : true,
         isPaid : true,
-        agreedKoreanPrivacyPolicy : this.state.agreedKoreanPrivacyPolicy,
-        korName : this.state.korName.trim(),
-        mobilePhoneNum : this.state.mobilePhoneNum.trim(),
         engLastName : this.state.engLastName.trim(),
         engFirstName : this.state.engFirstName.trim(),
         affiliation : this.state.affiliation.trim(),
         position : this.state.position.trim(),
         advisorName : this.state.advisorName.trim(),
-        willPresentPoster : this.state.willPresentPoster
+        willPresentPoster : (this.state.willPresentPoster == 'true'),
+        agreedKoreanPrivacyPolicy : this.state.agreedKoreanPrivacyPolicy,
+        korName : this.state.korName.trim(),
+        mobilePhoneNum : this.state.mobilePhoneNum.trim()
       });
     })
     .then(() => {
@@ -142,99 +143,36 @@ export class GetTicketForm extends Tracker.Component {
         merchant_uid : _merchant_uid
       });
     });
-
-    /*
-    IMP.request_pay({
-      pg : 'uplus',
-      pay_method : 'card',
-      merchant_uid : _merchant_uid,
-      name : '2017 Winter School in Imaging Science',
-      amount : _amount,
-      buyer_email : Meteor.user().emails[0].address,
-      buyer_name : this.state.korName,
-      buyer_tel : this.state.mobilePhoneNum
-    }, function(rsp) {
-      if ( rsp.success ) {
-        Meteor.callPromise('iamport.checkPaymentValid', {
-          merchant_uid : _merchant_uid,
-          paidAmount: rsp.paid_amount
-        })
-        .then(() => {
-          return Meteor.callPromise('tickets.insertKor', {
-            isKorean : true,
-            isPaid : true,
-            agreedKoreanPrivacyPolicy : this.state.agreedKoreanPrivacyPolicy,
-            korName : this.state.korName.trim(),
-            mobilePhoneNum : this.state.mobilePhoneNum.trim(),
-            engLastName : this.state.engLastName.trim(),
-            engFirstName : this.state.engFirstName.trim(),
-            affiliation : this.state.affiliation.trim(),
-            position : this.state.position.trim(),
-            advisorName : this.state.advisorName.trim(),
-            willPresentPoster : this.state.willPresentPoster
-          });
-        })
-        .then(() => {
-          var msg = '등록에 성공하였습니다.';
-          msg += '결제 금액 : ' + rsp.paid_amount;
-          alert(msg);
-          done();
-        })
-        .catch((err) => {
-          var msg = '검증이 실패했습니다. 다시 결제하여 주세요. ';
-          alert(msg + err);
-          window.location.reload(true);
-        })
-        .catch((err) => {
-          var msg = '등록이 실패하였습니다. 처음부터 다시 시작해주세요. ';
-          alert(msg + err);
-
-          return Meteor.callPromise('iamport.cancelPayment', {
-            merchant_uid : _merchant_uid
-          })
-        })
-        .catch((err) => {
-          var msg = '결제를 취소하지 못했습니다. 담당자에게 연락해주세요. ';
-          alert(msg + err);
-          done();
-        })
-
-      } else {
-        var msg = '결제에 실패하였습니다. 다시 시도해주세요. ';
-        msg += '에러내용 : ' + rsp.error_msg;
-        alert(msg);
-        // window.location.reload(true);
-      }
-    });
-    */
   }
 
   handleNonKorOnSubmit(event) {
     event.preventDefault();
-
-    Meteor.call('tickets.insertNonKor', {
-      isKorean : false,
-      isPaid : false,
-      nationality : this.state.nationality.trim(),
-      engLastName : this.state.engLastName.trim(),
-      engFirstName : this.state.engFirstName.trim(),
-      affiliation : this.state.affiliation.trim(),
-      position : this.state.position.trim(),
-      advisorName : this.state.advisorName.trim(),
-      willPresentPoster : this.state.willPresentPoster
-    }, (err, res) => {
-      if (err) {
-        event.preventDefault();
-        Alert.error(err, {
-          position: 'top'
-        });
-      } else {
-        // success!
-        Alert.success('You have succefully registred!', {
-          position: 'top'
-        });
-      }
-    });
+    // wait for setstate
+    setTimeout(function() {
+      Meteor.call('tickets.insertNonKor', {
+        isKorean : false,
+        isPaid : false,
+        engLastName : this.state.engLastName.trim(),
+        engFirstName : this.state.engFirstName.trim(),
+        affiliation : this.state.affiliation.trim(),
+        position : this.state.position.trim(),
+        advisorName : this.state.advisorName.trim(),
+        willPresentPoster : (this.state.willPresentPoster == 'true'),
+        nationality : this.state.nationality.trim()
+      }, (err, res) => {
+        if (err) {
+          event.preventDefault();
+          Alert.error(err, {
+            position: 'top'
+          });
+        } else {
+          // success!
+          Alert.success('You have succefully registred!', {
+            position: 'top'
+          });
+        }
+      });
+    }.bind(this), 1000);
   }
 
   render() {
