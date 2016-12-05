@@ -15,8 +15,6 @@ class ProfileInfo extends React.Component {
 
   render() {
     const willPresentPoster = this.props.ticket.willPresentPoster;
-    console.log(willPresentPoster);
-    console.log(typeof(willPresentPoster));
     return (
       <Table>
         <thead>
