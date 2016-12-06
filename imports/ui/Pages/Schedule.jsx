@@ -20,6 +20,14 @@ export const Schedule = () => (
         </thead>
         <tbody>
           <tr>
+            <td>09:00-09:30</td>
+            <td>Imaging</td>
+            <td>A study for Mesh Generation using Partial Differential Equation</td>
+            <td>Kiwan Jeon</td>
+            <td>Granato</td>
+            <td>KR</td>
+          </tr>
+          <tr>
             <td>14:00-16:00</td>
             <td>NIMS</td>
             <td>Talk 1: Mathematical Data Analytics and Its Applications</td>
@@ -75,6 +83,14 @@ export const Schedule = () => (
             <td>Jiashi Feng</td>
             <td>Zaffiro</td>
             <td>EN</td>
+          </tr>
+          <tr>
+            <td>09:00-09:50</td>
+            <td>Imaging</td>
+            <td>계산 기하학의 Forward/Inverse 문제와 응용</td>
+            <td>Junghun Cho</td>
+            <td>Granato</td>
+            <td>KR</td>
           </tr>
           <tr>
             <td>09:40-10:00</td>

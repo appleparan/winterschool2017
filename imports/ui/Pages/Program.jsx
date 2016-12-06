@@ -55,7 +55,7 @@ export const Program = () => (
           </thead>
           <tbody>
             <tr>
-              <td>Current issues on X-ray computed tomography imaging</td>
+              <td>Current Issues on X-ray Computed Tomography Imaging</td>
               <td>Hyoung Suk Park, Jong Chul Ye</td>
               <td>NIMS, KAIST</td>
             </tr>
@@ -65,7 +65,7 @@ export const Program = () => (
               <td>NIMS </td>
             </tr>
             <tr>
-              <td>A tutorial on microwave imaging technique</td>
+              <td>A Tutorial on Microwave Imaging Technique</td>
               <td>Won-Kwang Park</td>
               <td>Kookmin University</td>
             </tr>
@@ -90,9 +90,10 @@ export const Program = () => (
     <Row>
       <Col xs={12}>
         <ul>
-          <li><a href="/special/hsp.pdf">Session Poster : Current issues on X-ray computed tomography imaging</a></li>
+          <li><a href="/special/hsp.pdf">Session Poster : Current Issues on X-ray Computed Tomography Imaging</a></li>
           <li><a href="/special/cya.pdf">Session Poster : Understanding of Ultrasound Examinations and Applications of Deep Learning</a></li>
-          <li><a href="/special/wkp.pdf">Session Poster : A tutorial on microwave imaging technique</a></li>
+          <li><a href="/special/wkp.pdf">Session Poster : A Tutorial on Microwave Imaging Technique</a></li>
+          <li><a href="/special/lco.pdf">Session Poster : Computational Mathematics and Imaging</a></li>
           <li><a href="/special/tyh.pdf">Session Poster : 국가수리과학연구소 내에서의 과제 소개</a></li>
         </ul>
       </Col>
@@ -115,6 +116,18 @@ export const Program = () => (
           </thead>
           <tbody>
             <tr>
+              <td>Hyoung Suk Park</td>
+              <td>CT</td>
+              <td>1/9</td>
+              <td>Division of Integrated Mathematics, NIMS</td>
+            </tr>
+            <tr>
+              <td>Jin Keun Seo</td>
+              <td>CT</td>
+              <td>1/9</td>
+              <td>Dept. of Computational Science and Engineering, Yonsei University</td>
+            </tr>
+            <tr>
               <td>Yong Eun Chung</td>
               <td>CT</td>
               <td>1/10</td>
@@ -125,30 +138,6 @@ export const Program = () => (
               <td>CT</td>
               <td>1/10</td>
               <td>Dept. of Electrical and Computer Engineering, National University of Singapore</td>
-            </tr>
-            <tr>
-              <td>Yunkyoung Hyon</td>
-              <td>NIMS</td>
-              <td>1/9</td>
-              <td>Division of Integrated Mathematics, NIMS</td>
-            </tr>
-            <tr>
-              <td>Jae Sung Jang</td>
-              <td>Ultrasound</td>
-              <td>1/10</td>
-              <td>Dept. of Computational Science and Engineering, Yonsei University</td>
-            </tr>
-            <tr>
-              <td>Soonjeong Jo</td>
-              <td>Ultrasound</td>
-              <td>1/10</td>
-              <td>ALPINION MEDICAL SYSTEMS Corporation</td>
-            </tr>
-            <tr>
-              <td>Sol-Lip Kwon</td>
-              <td>Microwave</td>
-              <td>1/11</td>
-              <td>Dept. of Electronics Engineering, Ewha Womans University</td>
             </tr>
             <tr>
               <td>Ho Kyung Kim</td>
@@ -163,10 +152,34 @@ export const Program = () => (
               <td>Radiology Department, Harvard Medical School</td>
             </tr>
             <tr>
+              <td>Jung Chul Ye</td>
+              <td>CT</td>
+              <td>1/10</td>
+              <td>Dept. of Bio and Brain Engineering, KAIST</td>
+            </tr>
+            <tr>
+              <td>Kiwan Jeon</td>
+              <td>Imaging</td>
+              <td>1/9</td>
+              <td>Division of Integrated Mathematics, NIMS</td>
+            </tr>
+            <tr>
+              <td>Junghyun Cho</td>
+              <td>Imaging</td>
+              <td>1/10</td>
+              <td>Korea Institute of Science and Technology (KIST)</td>
+            </tr>
+            <tr>
               <td>Hwa Pyung Kim</td>
               <td>Microwave</td>
               <td>1/11</td>
               <td>Dept. of Computational Science and Engineering, Yonsei University</td>
+            </tr>
+            <tr>
+              <td>Sol-Lip Kwon</td>
+              <td>Microwave</td>
+              <td>1/11</td>
+              <td>Dept. of Electronics Engineering, Ewha Womans University</td>
             </tr>
             <tr>
               <td>Kwang-Jae Lee</td>
@@ -175,28 +188,10 @@ export const Program = () => (
               <td>Radio Technology Research Department, Electronics and Telecommunications Research Institute (ETRI)</td>
             </tr>
             <tr>
-              <td>Wanho Lee</td>
-              <td>NIMS</td>
-              <td>1/9</td>
-              <td>Division of Integrated Mathematics, NIMS</td>
-            </tr>
-            <tr>
-              <td>Hyoung Suk Park</td>
-              <td>CT</td>
-              <td>1/9</td>
-              <td>Division of Integrated Mathematics, NIMS</td>
-            </tr>
-            <tr>
               <td>Won-Kwang Park</td>
               <td>Microwave</td>
               <td>1/11</td>
               <td>Dept. of Mathematics, Kookmin University</td>
-            </tr>
-            <tr>
-              <td>Jin Keun Seo</td>
-              <td>CT</td>
-              <td>1/9</td>
-              <td>Dept. of Computational Science and Engineering, Yonsei University</td>
             </tr>
             <tr>
               <td>Seong-Ho Son</td>
@@ -205,17 +200,42 @@ export const Program = () => (
               <td>Radio Technology Research Department, Electronics and Telecommunications Research Institute (ETRI)</td>
             </tr>
             <tr>
+              <td>Yunkyoung Hyon</td>
+              <td>NIMS</td>
+              <td>1/9</td>
+              <td>Division of Integrated Mathematics, NIMS</td>
+            </tr>
+            <tr>
+              <td>Wanho Lee</td>
+              <td>NIMS</td>
+              <td>1/9</td>
+              <td>Division of Integrated Mathematics, NIMS</td>
+            </tr>
+            <tr>
+              <td>Yoongu Hwang</td>
+              <td>Ultrasound</td>
+              <td>1/10</td>
+              <td>Dept. of Computational Science and Engineering, Yonsei University</td>
+            </tr>
+            <tr>
+              <td>Jae Sung Jang</td>
+              <td>Ultrasound</td>
+              <td>1/10</td>
+              <td>Dept. of Computational Science and Engineering, Yonsei University</td>
+            </tr>
+            <tr>
+              <td>Soonjeong Jo</td>
+              <td>Ultrasound</td>
+              <td>1/10</td>
+              <td>ALPINION MEDICAL SYSTEMS Corporation</td>
+            </tr>
+            <tr>
               <td>HanByul Yang</td>
               <td>Ultrasound</td>
               <td>1/10</td>
               <td>NVIDIA Corporation</td>
             </tr>
-            <tr>
-              <td>Jung Chul Ye</td>
-              <td>CT</td>
-              <td>1/10</td>
-              <td>Dept. of Bio and Brain Engineering, KAIST</td>
-            </tr>
+
           </tbody>
         </Table>
       </Col></Row>
