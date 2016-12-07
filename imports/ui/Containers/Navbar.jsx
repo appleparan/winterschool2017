@@ -8,7 +8,7 @@ import { IndexLinkContainer, LinkContainer } from 'react-router-bootstrap';
 // For IndexLink & LinkContainer
 // https://themeteorchef.com/snippets/react-router-basics/#tmc-setting-up-our-routes
 export const NavbarLayout = () => (
-  <Navbar fixedTop>
+  <Navbar fixedTop className="navbar-winter">
     <Navbar.Header>
       <Navbar.Brand>
         <IndexLink to="/">
@@ -29,7 +29,7 @@ export const NavbarLayout = () => (
           <NavItem title="Venue" eventKey="3">Venue</NavItem>
         </LinkContainer>
         <LinkContainer to="/register">
-          <Button  title="Register" eventKey="4" bsStyle="primary" className="navbar-btn"> Register Now </Button>
+          <NavItem title="Register" eventKey="4">Register</NavItem>
         </LinkContainer>
       </Nav>
     </Navbar.Collapse>
