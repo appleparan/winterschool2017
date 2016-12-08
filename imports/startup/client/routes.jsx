@@ -13,6 +13,7 @@ import { AppContainer } from '/imports/ui/Containers/AppContainer.jsx';
 // Pages
 import { Overview } from  '/imports/ui/Pages/Overview.jsx';
 import { Program } from  '/imports/ui/Pages/Program.jsx';
+import { ProgramCT, ProgramUltraSound, ProgramMicrowave, ProgramNIMS, ProgramImaging } from  '/imports/ui/Pages/ProgramDetail.jsx';
 import { Schedule } from  '/imports/ui/Pages/Schedule.jsx';
 import { Venue } from  '/imports/ui/Pages/Venue.jsx';
 
@@ -25,7 +26,11 @@ Meteor.startup( () => {
     <Router history={ browserHistory } >
       <Route path="/" components={ AppContainer }>
         <IndexRoute component={ Overview } />
-        <Route path="program" component={ Program } />
+        <Route path="program/ct" component={ ProgramCT } />
+        <Route path="program/ultrasound" component={ ProgramUltraSound } />
+        <Route path="program/microwave" component={ ProgramMicrowave } />
+        <Route path="program/nims" component={ ProgramNIMS } />
+        <Route path="program/imaging" component={ ProgramImaging } />
         <Route path="schedule" component={ Schedule } />
         <Route path="venue" component={ Venue } />
         <Route path="register" component={ RegisterInfo } />

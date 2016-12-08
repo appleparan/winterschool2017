@@ -5,8 +5,8 @@ export const Overview = () => (
   <div>
     <Grid>
       <Row>
-        <Col xs={12} sm={6}>
-          <section className="overview-poster">
+        <Col xs={12} sm={12}>
+          <section className="overview-poster hidden">
             <Row>
               <picture>
                 <source
@@ -85,29 +85,99 @@ export const Overview = () => (
             </Row>
           </section>
         </Col>
-        <Col xs={12} sm={6}>
+        <Col xs={12} sm={12}>
           <section className="overview">
             <Row>
-              <h1 className="section-header">Overview</h1>
-            </Row>
-            <Row>
+              <h1 className="section-header">The 2nd Winter School in Imaging Science</h1>
               <ul>
-                <li>Date : 9-11 January 2017 </li>
+                <li>Date : 9-11 January 2017</li>
                 <li>Location : Sonofelice, Hongcheon-Gun, Gangwon-Do, Korea</li>
               </ul>
+              <p>
+                The 2nd Winter School in Imaging Science will be held from 9-11 January 2017 at the Sonofelice (Daemyung Resort), located in the Hongcheon-gun, Gangwon Province, Korea.
+
+                This winter school in Imaging Science will include tutorial programs on Deep learning and CT(main topic), special sessions (Ultrasound, Microwave,  Computational Imaging), introduction of NIMS research, and other group meetings (EIT group, CFD group, NA group, A3 meeting)
+              </p>
+              <h2 className="section-subheader">
+                Main Topic : Deep learning and current issues in CT
+              </h2>
+              <h3 className="section-subsubheader">
+                <b>Keynote Talk</b>
+              </h3>
               <ul>
-                <p> The 2nd Winter School in Imaging Science will be held from 9-11 January 2017 at the Sonofelice (Daemyung Resort),
-                    located in the Hongcheon-gun, Gangwon Province, Korea. This Winter School is an activity of A3 Foresight Program
-                    (Modeling and Computation of Applied Inverse Problems), hosted and supported by Korean A3 Foresight Program.
-                    This winter school in Imaging Science will include tutorial programs (in-depth tutorials, mini-courses, etc) as
-                    well as Group meetings (A3 meeting, Medical Imaging Group, Num. Anal.&amp; Sci.Comp Group, CFD Group, etc),
-                    aiming to provide insight into the various interfaces among mathematical theories, scientific computation,
-                    and the visualization of real-world problems for students and researchers.</p>
+                <li>
+                  Deep learning
+                  <ul>
+                    <li>
+                      Jiashi Feng (National University of Singapore)
+                    </li>
+                  </ul>
+                </li>
               </ul>
-              <h2 className="section-subheader"><a href="/official-docs/winterschool2017_poster.pdf">Poster (PDF)</a></h2>
+              <h3 className="section-subsubheader">
+                <b>Tutorials</b>
+              </h3>
+              <ul>
+                <li>Deep learning 따라하기
+                  <ul>
+                    <li>
+                      Jae Sung Jang (Yonsei University)
+                    </li>
+                    <li>
+                      이성민 (Yonsei University)
+                    </li>
+                    <li>
+                      김부권 (Yonsei University)
+                    </li>
+                    <li>
+                      Jin Keun Seo (Yonsei University)
+                    </li>
+                  </ul>
+
+                </li>
+                <li>
+                  Sparse sensing: Fundamentals and applications in X-ray CT
+                  <ul>
+                    <li>
+                      Hyoung Suk Park (NIMS)
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <h3 className="section-subsubheader">
+                <b>Special Sessions</b>
+              </h3>
+              <ul>
+                <li>
+                  <a href="#">Understanding of Ultrasound Examinations and Applications of Deep Learning</a>
+                </li>
+                <li>
+                  <a href="#">A Tutorial on Microwave Imaging Technique</a>
+                </li>
+                <li>
+                  <a href="#">Computational Mathematics and Imaging</a>
+                </li>
+                <li>
+                  <a href="#">국가수리과학연구소 내에서의 과제 소개</a>
+                </li>
+              </ul>
+              <h3 className="section-subsubheader">
+                Organizers
+              </h3>
+              <p>
+                Jin Keun Seo (Yonsei.), Jong Chul Ye(KAIST), Taeuk Jeong(Yonsei.)
+              </p>
+
+
             </Row>
             <Row>
-              <img className="img-responsive" src="/img/logo.jpg" alt="" />
+              <h3 className="section-subsubheader">
+                Sponser
+              </h3>
+              <p>
+                This Winter School is an activity of A3 Foresight Program (Modeling and Computation of Applied Inverse Problems), hosted and supported by Korean A3 Foresight Program.
+              </p>
+              <img className="img-responsive" src="/img/logo.png" alt="" />
             </Row>
           </section>
         </Col>

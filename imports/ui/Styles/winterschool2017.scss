@@ -61,7 +61,25 @@ body {
       }
     }
   }
+  .dropdown {
+    a {
+      color: #fff;
+      background-color: #1375a4;
+      &:hover {
+        color: #fff;
+        background-color: #1375a4;
+      }
+    }
 
+    ul {
+      li {
+        a {
+          color: #333;
+          background-color: #fff;
+        }
+      }
+    }
+  }
 }
 
 .section-header {
@@ -90,6 +108,13 @@ body {
 
 .hidden {
   display: none;
+}
+
+.pdf-view {
+  canvas {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 a.anchor {
