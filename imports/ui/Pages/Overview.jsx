@@ -115,7 +115,7 @@ export const Overview = () => (
               <ul>
                 <li><a href="/program/ct">Deep learning</a> 따라하기 (장재성, 이성민, 김부권, 서진근, 연세대학교)</li>
                 <li>
-                  Sparse sensing: Fundamentals and applications in X-ray CT (박형석, NIMS)
+                  <a href="/program/ct">Sparse sensing: Fundamentals and applications in X-ray CT (박형석, NIMS)</a>
                 </li>
               </ul>
               <h3 className="section-subsubheader">
@@ -123,16 +123,16 @@ export const Overview = () => (
               </h3>
               <ul>
                 <li>
-                  <a href="#">Understanding of Ultrasound Examinations and Applications of Deep Learning</a>
+                  <a href="/program/ultrasound">Understanding of Ultrasound Examinations and Applications of Deep Learning</a>
                 </li>
                 <li>
-                  <a href="#">A Tutorial on Microwave Imaging Technique</a>
+                  <a href="/program/microwave">A Tutorial on Microwave Imaging Technique</a>
                 </li>
                 <li>
-                  <a href="#">Computational Mathematics and Imaging</a>
+                  <a href="/program/imaging">Computational Mathematics and Imaging</a>
                 </li>
                 <li>
-                  <a href="#">국가수리과학연구소 내에서의 과제 소개</a>
+                  <a href="/program/nims">국가수리과학연구소 내에서의 과제 소개</a>
                 </li>
               </ul>
               <h3 className="section-subsubheader">
