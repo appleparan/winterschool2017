@@ -7,7 +7,7 @@ import { FooterLayout } from  './Footer.jsx';
 // export class AppLayout extends Component {
 export const AppContainer = ({ children }) => (
   <div>
-    <div id="wrapper">
+    <div className="wrapper">
       <NavbarLayout />
       { children }
     </div>

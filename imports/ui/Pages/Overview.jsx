@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Row, Col } from 'react-bootstrap';
+import { Grid, Row, Col, Button } from 'react-bootstrap';
 
 export const Overview = () => (
   <div>
@@ -99,7 +99,7 @@ export const Overview = () => (
                 This winter school in Imaging Science will include tutorial programs on Deep learning and CT(main topic), special sessions (Ultrasound, Microwave,  Computational Imaging), introduction of NIMS research, and other group meetings (EIT group, CFD group, NA group, A3 meeting)
               </p>
               <h2 className="section-subheader">
-                Main Topic : Deep learning and current issues in CT
+                Main Topic : Deep learning and current issues in MI
               </h2>
               <h3 className="section-subsubheader">
                 <b>Keynote Talk</b>
@@ -170,6 +170,9 @@ export const Overview = () => (
 
 
             </Row>
+            <h2 className="section-subheader">
+              <Button><a href="/official-docs/winterschool2017_poster.pdf">Poster (PDF)</a></Button>
+            </h2>
             <Row>
               <h3 className="section-subsubheader">
                 Sponser

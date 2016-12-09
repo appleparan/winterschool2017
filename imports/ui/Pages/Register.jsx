@@ -21,7 +21,7 @@ export class RegisterInfo extends Component {
             <p> On-site Registration Fee : <i className="fa fa-krw" aria-hidden="true"></i> 300,000 won </p>
             <p> Registration Fee includes : Dinner (Monday,Tuesday), Coffee and Snacks</p>
             <ul>
-              <li>Early Registration Deadline : Dec 8, 2016 </li>
+              <li>Early Registration Deadline : <strike> Dec 8, 2016 </strike> (Wed.) Dec 14, 2016 </li>
 
               <li><strong>결제 금액 환불 및 취소는 불가</strong>하므로 신중히 결제하여 주시기 바랍니다.</li>
               <li>Registration fee for foreign A3 participants will be exempted.</li>
