@@ -106,7 +106,7 @@ export const Overview = () => (
               </h3>
               <ul>
                 <li>
-                  <a href="/program/ct">Deep learning</a> (Jiashi Feng (National University of Singapore))
+                  <a href="/program/ct">Deep learning</a> (Jiashi Feng (National University of Singapore)
                 </li>
               </ul>
               <h3 className="section-subsubheader">
