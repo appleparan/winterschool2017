@@ -288,16 +288,23 @@ export class Schedule extends Component {
     }
 
     return (
-      <section>
-        <Row>
-          <Col>
-            <div className="pdf-view">
-              <PDF file="/schedule/2017-a3-schedule.pdf"  onDocumentComplete={this.onDocumentComplete} onPageComplete={this.onPageComplete} page={this.state.page} />
-              {pagination}
-            </div>
-          </Col>
-        </Row>
-      </section>
+      <div>
+        <section className="pdf-section">
+          <Row><Col xsOffset={3} smOffset={5}>
+            <Button bsSize="large" href="/schedule/2017-a3-schedule.pdf"> Download PDF Manually </Button>
+          </Col></Row>
+        </section>
+        <section className="pdf-view-section">
+          <Row>
+            <Col>
+              <div className="pdf-view">
+                <PDF file="/schedule/2017-a3-schedule.pdf"  onDocumentComplete={this.onDocumentComplete} onPageComplete={this.onPageComplete} page={this.state.page} />
+                {pagination}
+              </div>
+            </Col>
+          </Row>
+        </section>
+      </div>
     )
   }
 }
