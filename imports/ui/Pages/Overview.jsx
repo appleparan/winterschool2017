@@ -106,42 +106,16 @@ export const Overview = () => (
               </h3>
               <ul>
                 <li>
-                  Deep learning
-                  <ul>
-                    <li>
-                      Jiashi Feng (National University of Singapore)
-                    </li>
-                  </ul>
+                  Deep learning (Jiashi Feng (National University of Singapore))
                 </li>
               </ul>
               <h3 className="section-subsubheader">
                 <b>Tutorials</b>
               </h3>
               <ul>
-                <li>Deep learning 따라하기
-                  <ul>
-                    <li>
-                      Jae Sung Jang (Yonsei University)
-                    </li>
-                    <li>
-                      이성민 (Yonsei University)
-                    </li>
-                    <li>
-                      김부권 (Yonsei University)
-                    </li>
-                    <li>
-                      Jin Keun Seo (Yonsei University)
-                    </li>
-                  </ul>
-
-                </li>
+                <li><a href="/program/ct">Deep learning</a> 따라하기 (장재성, 이성민, 김부권, 서진근, 연세대학교)</li>
                 <li>
-                  Sparse sensing: Fundamentals and applications in X-ray CT
-                  <ul>
-                    <li>
-                      Hyoung Suk Park (NIMS)
-                    </li>
-                  </ul>
+                  Sparse sensing: Fundamentals and applications in X-ray CT (박형석, NIMS)
                 </li>
               </ul>
               <h3 className="section-subsubheader">
@@ -174,12 +148,6 @@ export const Overview = () => (
               <Button><a href="/official-docs/winterschool2017_poster.pdf">Poster (PDF)</a></Button>
             </h2>
             <Row>
-              <h3 className="section-subsubheader">
-                Sponser
-              </h3>
-              <p>
-                This Winter School is an activity of A3 Foresight Program (Modeling and Computation of Applied Inverse Problems), hosted and supported by Korean A3 Foresight Program.
-              </p>
               <img className="img-responsive" src="/img/logo.png" alt="" />
             </Row>
           </section>

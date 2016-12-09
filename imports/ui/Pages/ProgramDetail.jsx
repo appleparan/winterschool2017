@@ -13,11 +13,7 @@ export class ProgramCT extends Component {
 
             This program in the winter school is intended to give graduate students and young researchers the opportunity to get an insight into the current issues on X-ray computed tomography imaging such as low-dose CT, metal artifacts, photon counting CT and so on. This program will consist of two parts: research lectures and tutorials using MATLAB. The speakers are well-known researchers working in the field of medical imaging.
           </p>
-          <h3 className="section-subsubheader">Organizer</h3>
-          <ul>
-            <li>Hyoung Suk Park (NIMS)</li>
-            <li>Jung Chul Ye (KAIST)</li>
-          </ul>
+
           <h3 className="section-subsubheader">Tutorials</h3>
           <ul>
             <li>Sparse sensing: Fundamentals and applications in X-ray CT</li>
@@ -35,6 +31,11 @@ export class ProgramCT extends Component {
             <li>Kyungsang Kim (Harvard Medical School)</li>
             <li>Jin Keun Seo (Yonsei University)</li>
             <li>Hyoung Suk Park (NIMS)</li>
+          </ul>
+          <h3 className="section-subsubheader">Session Organizer</h3>
+          <ul>
+            <li>Hyoung Suk Park (NIMS)</li>
+            <li>Jung Chul Ye (KAIST)</li>
           </ul>
           <h3 className="section-subsubheader">Schedule</h3>
           <Table responsive>
@@ -139,10 +140,7 @@ export class ProgramUltraSound extends Component {
           <h2 className="section-subheader">Topic: Understanding of Ultrasound Examinations and Applications of Deep Learning</h2>
           <p>
           </p>
-          <h3 className="section-subsubheader">Organizer</h3>
-          <ul>
-            <li>Chiyoung Ahn  (NIMS)</li>
-          </ul>
+
           <h3 className="section-subsubheader">Tutorials</h3>
           <ul>
             <li>심장 및 산부인과 초음파 진단의 임상적 이해</li>
@@ -154,6 +152,10 @@ export class ProgramUltraSound extends Component {
             <li>HanByul Yang (NVIDIA Corporation)</li>
             <li>Yoongu Hwang (Yonsei University)</li>
             <li>Jaeseong Jang (Yonsei University)</li>
+          </ul>
+          <h3 className="section-subsubheader">Session Organizer</h3>
+          <ul>
+            <li>Chiyoung Ahn  (NIMS)</li>
           </ul>
           <h3 className="section-subsubheader">Schedule</h3>
             <Table responsive>
@@ -223,10 +225,7 @@ export class ProgramMicrowave extends Component {
           <p>
             The program concerns both the mathematical and engineering concept of microwave imaging technique. This program deals with breast cancer detection, static/differential tomography, hardware and experiments, application of MUltiple SIgnal Classification (MUSIC) algorithm, and inversion technique Distinguished expert speakers will give some insights and current issues in microwave imaging.
           </p>
-          <h3 className="section-subsubheader">Organizer</h3>
-          <ul>
-            <li>박원광 (국민대)</li>
-          </ul>
+
           <h3 className="section-subsubheader">Tutorials</h3>
           <ul>
             <li>Application to the breast cancer detection</li>
@@ -241,6 +240,10 @@ export class ProgramMicrowave extends Component {
             <li>Seong-Ho Son (ETRI)</li>
             <li>Kwang-Jae Lee  (ETRI)</li>
             <li>Won-Kwang Park (Kookmin University)</li>
+          </ul>
+          <h3 className="section-subsubheader">Session Organizer</h3>
+          <ul>
+            <li>박원광 (국민대)</li>
           </ul>
           <h3 className="section-subsubheader">Schedule</h3>
           <Table responsive>
@@ -321,10 +324,6 @@ export class ProgramNIMS extends Component {
 
             2. 혈류 순환이나 세포 이동 등 인체 내에서 일어나는 복잡하고 다양한 현상을 이해하고 진단 및 치료에 활용하기 위해 수학적 모델이 급격하게 대두되고 있습니다. 이에 연구소에서 진행하고 있는 인체 내 생명현상과 관련된 수학적모델링 연구결과를 소개하고 활용방안에 대해 토의합니다.
           </p>
-          <h3 className="section-subsubheader">Organizer</h3>
-          <ul>
-            <li>하태영  (NIMS)</li>
-          </ul>
           <h3 className="section-subsubheader">Tutorials</h3>
           <ul>
             <li>Mathematical Data Analytics and Its Applications </li>
@@ -334,6 +333,10 @@ export class ProgramNIMS extends Component {
           <ul>
             <li>현윤영 (NIMS)</li>
             <li>이완호 (NIMS)</li>
+          </ul>
+          <h3 className="section-subsubheader">Session Organizer</h3>
+          <ul>
+            <li>하태영  (NIMS)</li>
           </ul>
           <h3 className="section-subsubheader">Schedule</h3>
           <Table responsive>
@@ -385,10 +388,6 @@ export class ProgramImaging extends Component {
           <h2 className="section-subheader">Topic: Computational Mathematics and Imaging</h2>
           <p>
           </p>
-          <h3 className="section-subsubheader">Organizer</h3>
-          <ul>
-            <li>Chang-Ock Lee  (KAIST)</li>
-          </ul>
           <h3 className="section-subsubheader">Tutorials</h3>
           <ul>
             <li></li>
@@ -397,6 +396,10 @@ export class ProgramImaging extends Component {
           <ul>
             <li>Kiwan Jeon (NIMS)</li>
             <li>Junghyun Cho (KIST)</li>
+          </ul>
+          <h3 className="section-subsubheader">Session Organizer</h3>
+          <ul>
+            <li>Chang-Ock Lee  (KAIST)</li>
           </ul>
           <h3 className="section-subsubheader">Schedule</h3>
           <Table responsive>
