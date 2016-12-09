@@ -113,9 +113,9 @@ export const Overview = () => (
                 <b>Tutorials</b>
               </h3>
               <ul>
-                <li><a href="/program/ct">Deep learning</a> 따라하기 (장재성, 이성민, 김부권, 서진근, 연세대학교)</li>
+                <li><a href="/program/ct">Deep learning 따라하기</a> (장재성, 이성민, 김부권, 서진근, 연세대학교)</li>
                 <li>
-                  <a href="/program/ct">Sparse sensing: Fundamentals and applications in X-ray CT (박형석, NIMS)</a>
+                  <a href="/program/ct">Sparse sensing: Fundamentals and applications in X-ray CT </a>(박형석, NIMS)
                 </li>
               </ul>
               <h3 className="section-subsubheader">
