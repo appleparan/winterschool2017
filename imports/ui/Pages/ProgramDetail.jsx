@@ -124,9 +124,7 @@ export class ProgramCT extends Component {
               </tr>
             </tbody>
           </Table>
-          <LinkContainer to="/sessions/ct/winterschool-ct.pdf">
-            <Button bsStyle="primary"> Poster </Button>
-          </LinkContainer>
+          <Button bsStyle="primary" href="/sessions/ct/winterschool-ct.pdf"> Poster </Button>
         </section>
       </Grid>
     )
@@ -209,10 +207,7 @@ export class ProgramUltraSound extends Component {
               </tr>
             </tbody>
           </Table>
-
-          <LinkContainer to="/sessions/ct/winterschool-ultrasound.pdf">
-            <Button bsStyle="primary"> Poster </Button>
-          </LinkContainer>
+          <Button bsStyle="primary" href="/sessions/ultrasound/winterschool-ultrasound.pdf"> Poster </Button>
         </section>
       </Grid>
     )
@@ -308,9 +303,7 @@ export class ProgramMicrowave extends Component {
               </tr>
             </tbody>
           </Table>
-          <LinkContainer to="/sessions/ct/winterschool-microwave.pdf">
-            <Button bsStyle="primary"> Poster </Button>
-          </LinkContainer>
+          <Button bsStyle="primary" href="/sessions/microwave/winterschool-microwave.pdf"> Poster </Button>
         </section>
       </Grid>
     )
@@ -343,42 +336,40 @@ export class ProgramNIMS extends Component {
             <li>이완호 (NIMS)</li>
           </ul>
           <h3 className="section-subsubheader">Schedule</h3>
-            <Table responsive>
-              <thead>
-                <tr>
-                  <th>Date</th>
-                  <th>Time</th>
-                  <th>Session</th>
-                  <th>Title</th>
-                  <th>Speaker</th>
-                  <th>Room</th>
-                  <th>Language</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1/9 (Mon.)</td>
-                  <td>14:00-16:00</td>
-                  <td>NIMS</td>
-                  <td>Talk 1: Mathematical Data Analytics and Its Applications</td>
-                  <td>Yunkyoung Hyon</td>
-                  <td>Granato</td>
-                  <td>KR</td>
-                </tr>
-                <tr>
-                  <td>1/9 (Mon.)</td>
-                  <td>16:00-17:00</td>
-                  <td>NIMS</td>
-                  <td>Talk 2: Study on the Human Biological Phenomena</td>
-                  <td>Wanho Lee</td>
-                  <td>Granato</td>
-                  <td>KR</td>
-                </tr>
-              </tbody>
-            </Table>
-          <LinkContainer to="/sessions/ct/winterschool-nims.pdf">
-            <Button bsStyle="primary"> Poster </Button>
-          </LinkContainer>
+          <Table responsive>
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Session</th>
+                <th>Title</th>
+                <th>Speaker</th>
+                <th>Room</th>
+                <th>Language</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1/9 (Mon.)</td>
+                <td>14:00-16:00</td>
+                <td>NIMS</td>
+                <td>Talk 1: Mathematical Data Analytics and Its Applications</td>
+                <td>Yunkyoung Hyon</td>
+                <td>Granato</td>
+                <td>KR</td>
+              </tr>
+              <tr>
+                <td>1/9 (Mon.)</td>
+                <td>16:00-17:00</td>
+                <td>NIMS</td>
+                <td>Talk 2: Study on the Human Biological Phenomena</td>
+                <td>Wanho Lee</td>
+                <td>Granato</td>
+                <td>KR</td>
+              </tr>
+            </tbody>
+          </Table>
+          <Button bsStyle="primary" href="/sessions/nims/winterschool-nims.pdf"> Poster </Button>
         </section>
       </Grid>
     )
@@ -441,9 +432,7 @@ export class ProgramImaging extends Component {
               </tr>
             </tbody>
           </Table>
-          <LinkContainer to="/sessions/ct/winterschool-imaging.pdf">
-            <Button bsStyle="primary"> Poster </Button>
-          </LinkContainer>
+          <Button bsStyle="primary" href="/sessions/imaging/winterschool-imaging.pdf"> Poster </Button>
         </section>
       </Grid>
     )
