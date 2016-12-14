@@ -82,7 +82,7 @@ export class ProgramCT extends Component {
                 <td>1/10 (Tue.)</td>
                 <td>09:40-10:00</td>
                 <td>CT</td>
-                <td>CT Talk 1</td>
+                <td>Wavelet domain deep learning approach for low-dose CT reconstruction</td>
                 <td>Jung Chul Ye</td>
                 <td>Zaffiro</td>
                 <td>KR</td>
@@ -91,7 +91,7 @@ export class ProgramCT extends Component {
                 <td>1/10 (Tue.)</td>
                 <td>10:00-10:20</td>
                 <td>CT</td>
-                <td>CT Talk 2</td>
+                <td>Discussions on x-ray tomography using sandwich detectors</td>
                 <td>Ho Kyung Kim</td>
                 <td>Zaffiro</td>
                 <td>KR</td>
@@ -100,7 +100,7 @@ export class ProgramCT extends Component {
                 <td>1/10 (Tue.)</td>
                 <td>10:20-10:40</td>
                 <td>CT</td>
-                <td>CT Talk 3</td>
+                <td>Double dose reduction in CT</td>
                 <td>Yong Eun Chung</td>
                 <td>Zaffiro</td>
                 <td>KR</td>
