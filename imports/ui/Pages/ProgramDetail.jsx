@@ -37,6 +37,10 @@ export class ProgramCT extends Component {
             <li>Hyoung Suk Park (NIMS)</li>
             <li>Jung Chul Ye (KAIST)</li>
           </ul>
+          <h3 className="section-subsubheader">준비물</h3>
+          <ul>
+            <li>개인 노트북</li>
+          </ul>
           <h3 className="section-subsubheader">Schedule</h3>
           <Table responsive>
             <thead>
@@ -157,9 +161,9 @@ export class ProgramUltraSound extends Component {
           <ul>
             <li>Chiyoung Ahn  (NIMS)</li>
           </ul>
-          <h3 className="section-subsubheader">Session Organizer</h3>
+          <h3 className="section-subsubheader">준비물</h3>
           <ul>
-            <li>Chiyoung Ahn  (NIMS)</li>
+            <li>TensorFlow가 설치된 노트북</li>
           </ul>
           <h3 className="section-subsubheader">Schedule</h3>
             <Table responsive>
