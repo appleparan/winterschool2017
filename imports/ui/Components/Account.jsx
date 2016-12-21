@@ -68,12 +68,12 @@ class ProfileConditional extends React.Component {
         </Grid>
       )
     }
-
+    // <GetTicketForm />
     return (
       <Grid>
         <Row>
           <Accounts.ui.LoginForm formState={ STATES.PROFILE } />
-          <GetTicketForm />
+          <h2>Registration is over.</h2>
         </Row>
       </Grid>
      )
