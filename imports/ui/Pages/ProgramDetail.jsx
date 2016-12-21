@@ -273,7 +273,7 @@ export class ProgramMicrowave extends Component {
                 <td>Microwave</td>
                 <td>Talk 1: Time-Domain Microwave Imaging for Breast Cancer Detection</td>
                 <td>Sol-Lip Kwon</td>
-                <td>Rubino</td>
+                <td>Granato</td>
                 <td>KR</td>
               </tr>
               <tr>
@@ -282,7 +282,7 @@ export class ProgramMicrowave extends Component {
                 <td>Microwave</td>
                 <td>Talk 2: An Introduction to Microwave Imaging – Having Continuous First and Second Derivatives</td>
                 <td>Hwa Pyung Kim</td>
-                <td>Rubino</td>
+                <td>Granato </td>
                 <td>KR</td>
               </tr>
               <tr>
@@ -291,7 +291,7 @@ export class ProgramMicrowave extends Component {
                 <td>Microwave</td>
                 <td>Talk 3: Basics of Static / Differential Microwave Tomography</td>
                 <td>Seong-Ho Son</td>
-                <td>Rubino</td>
+                <td>Granato</td>
                 <td>KR</td>
               </tr>
               <tr>
@@ -300,7 +300,7 @@ export class ProgramMicrowave extends Component {
                 <td>Microwave</td>
                 <td>Talk 4: Hardware and Experiments of Microwave Tomographic Imaging</td>
                 <td>Kwang-Jae Lee</td>
-                <td>Rubino</td>
+                <td>Granato</td>
                 <td>KR</td>
               </tr>
               <tr>
@@ -309,7 +309,7 @@ export class ProgramMicrowave extends Component {
                 <td>Microwave</td>
                 <td>Talk 5: MUSIC Algorithm for Small Anomaly Detection in Microwave Imaging</td>
                 <td>Won-Kwang Park</td>
-                <td>Rubino</td>
+                <td>Granato</td>
                 <td>KR</td>
               </tr>
             </tbody>
