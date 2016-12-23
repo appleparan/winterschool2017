@@ -39,7 +39,7 @@ export class ProgramCT extends Component {
           </ul>
           <h3 className="section-subsubheader">준비물</h3>
           <ul>
-            <li>개인 노트북</li>
+            <li>MATLAB이 설치된 노트북을 개인적으로 지참</li>
           </ul>
           <h3 className="section-subsubheader">Schedule</h3>
           <Table responsive>
@@ -163,7 +163,8 @@ export class ProgramUltraSound extends Component {
           </ul>
           <h3 className="section-subsubheader">준비물</h3>
           <ul>
-            <li>TensorFlow가 설치된 노트북</li>
+            <li>TensorFlow가 설치된 노트북을 개인적으로 지참</li>
+            <li><a href="https://www.tensorflow.org/get_started/os_setup">How to install TensorFlow</a></li>
           </ul>
           <h3 className="section-subsubheader">Schedule</h3>
             <Table responsive>
