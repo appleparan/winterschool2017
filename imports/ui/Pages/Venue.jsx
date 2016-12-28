@@ -71,7 +71,7 @@ export const Venue = () => (
         <h2 className="section-subheader">Transportation</h2>
         <p>How to get to Sonofelice (Daemyung Resort, Vivaldi Park)- 추후공지</p>
         <ButtonToolbar>
-          <Button href="http://www.daemyungresort.com/daemyung.front.saupjang.yangpyung.resort_way_map.ds/dmparse.dm?menuNo=04">Korean</Button>
+          <Button href="http://www.daemyungresort.com/daemyung.sn.resort.01_05.ds/dmparse.dm">Korean</Button>
           <Button href="http://www.daemyungresort.com/web/dm_english/html/01vivaldi_english_sub_10.html">English</Button>
           <Button href="http://www.daemyungresort.com/web/dm_china/html/01vivaldi_china_sub_10.html">China</Button>
           <Button href="http://www.daemyungresort.com/web/dm_japan/html/01vivaldi_japan_sub_10.html">Japan</Button>
