@@ -391,7 +391,6 @@ export class ProgramNIMS extends Component {
   }
 }
 
-
 export class ProgramImaging extends Component {
   render() {
     return (
@@ -400,14 +399,14 @@ export class ProgramImaging extends Component {
           <h2 className="section-subheader">Topic: Computational Mathematics and Imaging</h2>
           <p>
           </p>
-          <h3 className="section-subsubheader">Tutorials</h3>
-          <ul>
-            <li></li>
-          </ul>
           <h3 className="section-subsubheader">List of Speakers</h3>
           <ul>
             <li>Kiwan Jeon (NIMS)</li>
             <li>Junghyun Cho (KIST)</li>
+            <li>Doyeob Yeo (KIST)</li>
+            <li>Sumin Jeon (KIST)</li>
+            <li>Chang-Ock Lee (KIST)</li>
+            <li>Beomsu Kim (KIST)</li>
           </ul>
           <h3 className="section-subsubheader">Session Organizer</h3>
           <ul>
@@ -437,11 +436,47 @@ export class ProgramImaging extends Component {
                 <td>KR</td>
               </tr>
               <tr>
-                <td>1/10 (Tue.)</td>
-                <td>09:00-09:50</td>
+                <td>1/9 (Mon.)</td>
+                <td>09:30-10:00</td>
                 <td>Imaging</td>
-                <td>계산 기하학의 Forward/Inverse 문제와 응용</td>
+                <td>Design of an energy functional and an initial curve for the shape prior segmentation</td>
+                <td>Doyeob Yeo</td>
+                <td>Granato</td>
+                <td>KR</td>
+              </tr>
+              <tr>
+                <td>1/9 (Mon.)</td>
+                <td>10:30-11:00</td>
+                <td>Imaging</td>
+                <td>A CT Metal Artifact Reduction Algorithm Based on Sinogram Surgery</td>
+                <td>Sumin Jeon</td>
+                <td>Granato</td>
+                <td>KR</td>
+              </tr>
+              <tr>
+                <td>1/9 (Mon.)</td>
+                <td>11:00-11:30</td>
+                <td>Imaging</td>
+                <td>Cardiac Motion Tracking in the Ultrasound Image Using the Optical Flow Estimation</td>
+                <td>Chang-Ock Lee</td>
+                <td>Granato</td>
+                <td>KR</td>
+              </tr>
+              <tr>
+                <td>1/10 (Tue.)</td>
+                <td>09:40-10:30</td>
+                <td>Imaging</td>
+                <td>Forward and inverse problems of computational geometry in various computer vision and computer graphics applications</td>
                 <td>Junghun Cho</td>
+                <td>Granato</td>
+                <td>KR</td>
+              </tr>
+              <tr>
+                <td>1/10 (Tue.)</td>
+                <td>11:00-11:30</td>
+                <td>Imaging</td>
+                <td>A Volume Integral Method for Solving Scattering Problems from Locally Perturbed Infinite Periodic Layers</td>
+                <td>Beomsu Kim</td>
                 <td>Granato</td>
                 <td>KR</td>
               </tr>
