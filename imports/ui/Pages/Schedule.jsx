@@ -282,27 +282,12 @@ export class Schedule extends Component {
       </Grid>
     );
 
-    let pagination = null;
-    if (this.state.pages) {
-      pagination = this.renderPagination(this.state.page, this.state.pages);
-    }
-
     return (
       <div>
         <section className="pdf-section">
           <Row><Col xsOffset={3} smOffset={5}>
             <Button bsSize="large" href="/schedule/2017-a3-schedule.pdf"> Download PDF Manually </Button>
           </Col></Row>
-        </section>
-        <section className="pdf-view-section">
-          <Row>
-            <Col>
-              <div className="pdf-view">
-                <PDF file="/schedule/2017-a3-schedule.pdf"  onDocumentComplete={this.onDocumentComplete} onPageComplete={this.onPageComplete} page={this.state.page} />
-                {pagination}
-              </div>
-            </Col>
-          </Row>
         </section>
       </div>
     )
