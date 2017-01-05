@@ -403,10 +403,10 @@ export class ProgramImaging extends Component {
           <ul>
             <li>Kiwan Jeon (NIMS)</li>
             <li>Junghyun Cho (KIST)</li>
-            <li>Doyeob Yeo (KIST)</li>
-            <li>Sumin Jeon (KIST)</li>
-            <li>Chang-Ock Lee (KIST)</li>
-            <li>Beomsu Kim (KIST)</li>
+            <li>Doyeob Yeo (KAIST)</li>
+            <li>Soomin Jeon (KAIST)</li>
+            <li>Chang-Ock Lee (KAIST)</li>
+            <li>Bumsu Kim (KAIST)</li>
           </ul>
           <h3 className="section-subsubheader">Session Organizer</h3>
           <ul>
@@ -449,7 +449,7 @@ export class ProgramImaging extends Component {
                 <td>10:30-11:00</td>
                 <td>Imaging</td>
                 <td>A CT Metal Artifact Reduction Algorithm Based on Sinogram Surgery</td>
-                <td>Sumin Jeon</td>
+                <td>Soomin Jeon</td>
                 <td>Granato</td>
                 <td>KR</td>
               </tr>
@@ -476,7 +476,7 @@ export class ProgramImaging extends Component {
                 <td>11:00-11:30</td>
                 <td>Imaging</td>
                 <td>A Volume Integral Method for Solving Scattering Problems from Locally Perturbed Infinite Periodic Layers</td>
-                <td>Beomsu Kim</td>
+                <td>Bumsu Kim</td>
                 <td>Granato</td>
                 <td>KR</td>
               </tr>
