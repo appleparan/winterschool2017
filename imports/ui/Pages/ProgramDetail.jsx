@@ -40,6 +40,8 @@ export class ProgramCT extends Component {
           <h3 className="section-subsubheader">준비물</h3>
           <ul>
             <li>MATLAB이 설치된 노트북을 개인적으로 지참</li>
+            <li> Download following <a href="https://drive.google.com/file/d/0B8WgtGVJyBRVdDBXVXNpbE1jdWM/view?usp=sharing">code</a> 
+            </li>
           </ul>
           <h3 className="section-subsubheader">Schedule</h3>
           <Table responsive>
