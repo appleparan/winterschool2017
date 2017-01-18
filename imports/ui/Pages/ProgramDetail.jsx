@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Grid, Row, Col, Table, Button } from 'react-bootstrap';
 import { IndexLink, Link } from 'react-router';
 import { IndexLinkContainer, LinkContainer } from 'react-router-bootstrap';
+import FontAwesome from 'react-fontawesome';
 
 export class ProgramCT extends Component {
   render() {
@@ -40,7 +41,7 @@ export class ProgramCT extends Component {
           <h3 className="section-subsubheader">준비물</h3>
           <ul>
             <li>MATLAB이 설치된 노트북을 개인적으로 지참</li>
-            <li> Download following <a href="https://drive.google.com/file/d/0B8WgtGVJyBRVdDBXVXNpbE1jdWM/view?usp=sharing">code</a> 
+            <li> Download following <a href="https://drive.google.com/file/d/0B8WgtGVJyBRVdDBXVXNpbE1jdWM/view?usp=sharing">code</a>
             </li>
           </ul>
           <h3 className="section-subsubheader">Schedule</h3>
@@ -53,7 +54,7 @@ export class ProgramCT extends Component {
                 <th>Title</th>
                 <th>Speaker</th>
                 <th>Room</th>
-                <th>Language</th>
+                <th>Presentation</th>
               </tr>
             </thead>
             <tbody>
@@ -64,7 +65,7 @@ export class ProgramCT extends Component {
                 <td>Tutorial 1: Sparse sensing: Fundamentals and applications in X-ray CT  I</td>
                 <td>Hyoung Suk Park</td>
                 <td>Zaffiro</td>
-                <td>KR</td>
+                <td><a href="/sessions/ct/Hyoungsuk_Park.pdf"><FontAwesome name="download" /></a></td>
               </tr>
               <tr>
                 <td>1/9 (Mon.)</td>
@@ -73,7 +74,7 @@ export class ProgramCT extends Component {
                 <td>Tutorial 2: A tutorial on Deep Learning: CNN  I</td>
                 <td>Jin Keun Seo</td>
                 <td>Zaffiro</td>
-                <td>KR</td>
+                <td></td>
               </tr>
               <tr>
                 <td>1/10 (Tue.)</td>
@@ -82,7 +83,7 @@ export class ProgramCT extends Component {
                 <td>Keynote Talk: Deep learning</td>
                 <td>Jiashi Feng</td>
                 <td>Zaffiro</td>
-                <td>EN</td>
+                <td><a href="/sessions/ct/Jiashi_FENG.pdf"><FontAwesome name="download" /></a></td>
               </tr>
               <tr>
                 <td>1/10 (Tue.)</td>
@@ -91,7 +92,7 @@ export class ProgramCT extends Component {
                 <td>Wavelet domain deep learning approach for low-dose CT reconstruction</td>
                 <td>Jung Chul Ye</td>
                 <td>Zaffiro</td>
-                <td>KR</td>
+                <td></td>
               </tr>
               <tr>
                 <td>1/10 (Tue.)</td>
@@ -100,7 +101,7 @@ export class ProgramCT extends Component {
                 <td>Discussions on x-ray tomography using sandwich detectors</td>
                 <td>Ho Kyung Kim</td>
                 <td>Zaffiro</td>
-                <td>KR</td>
+                <td></td>
               </tr>
               <tr>
                 <td>1/10 (Tue.)</td>
@@ -109,7 +110,7 @@ export class ProgramCT extends Component {
                 <td>Double dose reduction in CT</td>
                 <td>Yong Eun Chung</td>
                 <td>Zaffiro</td>
-                <td>KR</td>
+                <td><a href="/sessions/ct/Yongeun_Chung.pptx"><FontAwesome name="download" /></a></td>
               </tr>
               <tr>
                 <td>1/10 (Tue.)</td>
@@ -118,7 +119,7 @@ export class ProgramCT extends Component {
                 <td>Tutorial 1: Sparse sensing: Fundamentals and applications in X-ray CT  II </td>
                 <td>Kyungsang Kim</td>
                 <td>Zaffiro</td>
-                <td>KR</td>
+                <td></td>
               </tr>
               <tr>
                 <td>1/10 (Tue.)</td>
@@ -127,7 +128,7 @@ export class ProgramCT extends Component {
                 <td>Tutorial 2: A tutorial on Deep Learning: CNN II </td>
                 <td>Jin Keun Seo</td>
                 <td>Zaffiro</td>
-                <td>KR</td>
+                <td></td>
               </tr>
             </tbody>
           </Table>
