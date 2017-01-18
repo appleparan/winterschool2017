@@ -179,7 +179,7 @@ export class ProgramUltraSound extends Component {
                   <th>Title</th>
                   <th>Speaker</th>
                   <th>Room</th>
-                  <th>Language</th>
+                  <th>Presentation</th>
                 </tr>
               </thead>
               <tbody>
@@ -190,7 +190,7 @@ export class ProgramUltraSound extends Component {
                 <td>Tutorial 1: 심장 및 산부인과 초음파 진단의 임상적 이해</td>
                 <td>Soonjeong Jo</td>
                 <td>Granato</td>
-                <td>KR</td>
+                <td></td>
               </tr>
               <tr>
                 <td>1/10 (Tue.)</td>
@@ -199,7 +199,7 @@ export class ProgramUltraSound extends Component {
                 <td>Tutorial 2: Tensorflow를 사용한 딥러닝 튜토리얼</td>
                 <td>HanByul Yang</td>
                 <td>Granato</td>
-                <td>KR</td>
+                <td></td>
               </tr>
               <tr>
                 <td>1/10 (Tue.)</td>
@@ -208,7 +208,7 @@ export class ProgramUltraSound extends Component {
                 <td>Tutorial 2: Tensorflow를 사용한 딥러닝 튜토리얼 (심장영상에 응용) </td>
                 <td>HanByul Yang</td>
                 <td>Granato</td>
-                <td>KR</td>
+                <td></td>
               </tr>
               <tr>
                 <td>1/10 (Tue.)</td>
@@ -217,7 +217,7 @@ export class ProgramUltraSound extends Component {
                 <td>Tutorial 3: CNN-based automatic measurement of fetal biometry </td>
                 <td>Jaeseong Jang</td>
                 <td>Granato</td>
-                <td>KR</td>
+                <td></td>
               </tr>
             </tbody>
           </Table>
@@ -267,7 +267,7 @@ export class ProgramMicrowave extends Component {
                 <th>Title</th>
                 <th>Speaker</th>
                 <th>Room</th>
-                <th>Language</th>
+                <th>Presentation</th>
               </tr>
             </thead>
             <tbody>
@@ -278,7 +278,7 @@ export class ProgramMicrowave extends Component {
                 <td>Talk 1: Time-Domain Microwave Imaging for Breast Cancer Detection</td>
                 <td>Sol-Lip Kwon</td>
                 <td>Granato</td>
-                <td>KR</td>
+                <td></td>
               </tr>
               <tr>
                 <td>1/11 (Wed.)</td>
@@ -287,7 +287,7 @@ export class ProgramMicrowave extends Component {
                 <td>Talk 2: An Introduction to Microwave Imaging – Having Continuous First and Second Derivatives</td>
                 <td>Hwa Pyung Kim</td>
                 <td>Granato </td>
-                <td>KR</td>
+                <td></td>
               </tr>
               <tr>
                 <td>1/11 (Wed.)</td>
@@ -296,7 +296,7 @@ export class ProgramMicrowave extends Component {
                 <td>Talk 3: Basics of Static / Differential Microwave Tomography</td>
                 <td>Seong-Ho Son</td>
                 <td>Granato</td>
-                <td>KR</td>
+                <td></td>
               </tr>
               <tr>
                 <td>1/11 (Wed.)</td>
@@ -305,7 +305,7 @@ export class ProgramMicrowave extends Component {
                 <td>Talk 4: Hardware and Experiments of Microwave Tomographic Imaging</td>
                 <td>Kwang-Jae Lee</td>
                 <td>Granato</td>
-                <td>KR</td>
+                <td></td>
               </tr>
               <tr>
                 <td>1/11 (Wed.)</td>
@@ -314,7 +314,7 @@ export class ProgramMicrowave extends Component {
                 <td>Talk 5: MUSIC Algorithm for Small Anomaly Detection in Microwave Imaging</td>
                 <td>Won-Kwang Park</td>
                 <td>Granato</td>
-                <td>KR</td>
+                <td></td>
               </tr>
             </tbody>
           </Table>
@@ -363,7 +363,7 @@ export class ProgramNIMS extends Component {
                 <th>Title</th>
                 <th>Speaker</th>
                 <th>Room</th>
-                <th>Language</th>
+                <th>Presentation</th>
               </tr>
             </thead>
             <tbody>
@@ -374,7 +374,7 @@ export class ProgramNIMS extends Component {
                 <td>Talk 1: Mathematical Data Analytics and Its Applications</td>
                 <td>Yunkyoung Hyon</td>
                 <td>Granato</td>
-                <td>KR</td>
+                <td></td>
               </tr>
               <tr>
                 <td>1/9 (Mon.)</td>
@@ -383,7 +383,7 @@ export class ProgramNIMS extends Component {
                 <td>Talk 2: Study on the Human Biological Phenomena</td>
                 <td>Wanho Lee</td>
                 <td>Granato</td>
-                <td>KR</td>
+                <td></td>
               </tr>
             </tbody>
           </Table>
@@ -425,7 +425,7 @@ export class ProgramImaging extends Component {
                 <th>Title</th>
                 <th>Speaker</th>
                 <th>Room</th>
-                <th>Language</th>
+                <th>Presentation</th>
               </tr>
             </thead>
             <tbody>
@@ -436,7 +436,7 @@ export class ProgramImaging extends Component {
                 <td>A study for Mesh Generation using Partial Differential Equation</td>
                 <td>Kiwan Jeon</td>
                 <td>Granato</td>
-                <td>KR</td>
+                <td></td>
               </tr>
               <tr>
                 <td>1/9 (Mon.)</td>
@@ -445,7 +445,7 @@ export class ProgramImaging extends Component {
                 <td>Design of an energy functional and an initial curve for the shape prior segmentation</td>
                 <td>Doyeob Yeo</td>
                 <td>Granato</td>
-                <td>KR</td>
+                <td></td>
               </tr>
               <tr>
                 <td>1/9 (Mon.)</td>
@@ -454,7 +454,7 @@ export class ProgramImaging extends Component {
                 <td>A CT Metal Artifact Reduction Algorithm Based on Sinogram Surgery</td>
                 <td>Soomin Jeon</td>
                 <td>Granato</td>
-                <td>KR</td>
+                <td></td>
               </tr>
               <tr>
                 <td>1/9 (Mon.)</td>
@@ -463,7 +463,7 @@ export class ProgramImaging extends Component {
                 <td>Cardiac Motion Tracking in the Ultrasound Image Using the Optical Flow Estimation</td>
                 <td>Chang-Ock Lee</td>
                 <td>Granato</td>
-                <td>KR</td>
+                <td></td>
               </tr>
               <tr>
                 <td>1/10 (Tue.)</td>
@@ -472,7 +472,7 @@ export class ProgramImaging extends Component {
                 <td>Forward and inverse problems of computational geometry in various computer vision and computer graphics applications</td>
                 <td>Junghun Cho</td>
                 <td>Granato</td>
-                <td>KR</td>
+                <td></td>
               </tr>
               <tr>
                 <td>1/10 (Tue.)</td>
@@ -481,7 +481,7 @@ export class ProgramImaging extends Component {
                 <td>A Volume Integral Method for Solving Scattering Problems from Locally Perturbed Infinite Periodic Layers</td>
                 <td>Bumsu Kim</td>
                 <td>Granato</td>
-                <td>KR</td>
+                <td></td>
               </tr>
             </tbody>
           </Table>
