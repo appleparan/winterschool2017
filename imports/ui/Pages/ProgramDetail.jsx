@@ -65,7 +65,7 @@ export class ProgramCT extends Component {
                 <td>Tutorial 1: Sparse sensing: Fundamentals and applications in X-ray CT  I</td>
                 <td>Hyoung Suk Park</td>
                 <td>Zaffiro</td>
-                <td><a href="/sessions/ct/Hyoungsuk_Park.pdf"><FontAwesome name="download" /></a></td>
+                <td></td>
               </tr>
               <tr>
                 <td>1/9 (Mon.)</td>
@@ -83,7 +83,7 @@ export class ProgramCT extends Component {
                 <td>Keynote Talk: Deep learning</td>
                 <td>Jiashi Feng</td>
                 <td>Zaffiro</td>
-                <td><a href="/sessions/ct/Jiashi_FENG.pdf"><FontAwesome name="download" /></a></td>
+                <td></td>
               </tr>
               <tr>
                 <td>1/10 (Tue.)</td>
@@ -110,7 +110,7 @@ export class ProgramCT extends Component {
                 <td>Double dose reduction in CT</td>
                 <td>Yong Eun Chung</td>
                 <td>Zaffiro</td>
-                <td><a href="/sessions/ct/Yongeun_Chung.pptx"><FontAwesome name="download" /></a></td>
+                <td></td>
               </tr>
               <tr>
                 <td>1/10 (Tue.)</td>
