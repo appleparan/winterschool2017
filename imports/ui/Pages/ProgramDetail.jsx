@@ -46,7 +46,7 @@ export class ProgramCT extends Component {
           </ul>
           <h3 className="section-subsubheader">발표자료</h3>
           <ul>
-            <li>MATLAB이 설치된 노트북을 개인적으로 지참</li>
+            <li><a href="http://mediviewsoft.com/"> Mediviewsoft 홈페이지</a>에서 다운로드 가능</li>
           </ul>
           <h3 className="section-subsubheader">Schedule</h3>
           <Table responsive>
