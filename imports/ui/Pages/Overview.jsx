@@ -99,6 +99,14 @@ export const Overview = () => (
                 This winter school in Imaging Science will include tutorial programs on Deep learning and CT(main topic), special sessions (Ultrasound, Microwave,  Computational Imaging), introduction of NIMS research, and other group meetings (EIT group, CFD group, NA group, A3 meeting)
               </p>
               <h2 className="section-subheader">
+                Gallery
+              </h2>
+              <p className="gallery">
+                You can find pictures of <i>The 2nd Winter School in Imaging Science</i> on this <a href="https://www.facebook.com/pg/yonsei.cse/photos/?tab=album&album_id=1200694069984791">link
+                </a>
+              </p>
+
+              <h2 className="section-subheader">
                 Main Topic : Deep learning and current issues in MI
               </h2>
               <h3 className="section-subsubheader">
@@ -141,8 +149,6 @@ export const Overview = () => (
               <p>
                 Jin Keun Seo (Yonsei.), Jong Chul Ye(KAIST), Taeuk Jeong(Yonsei.)
               </p>
-
-
             </Row>
             <h2 className="section-subheader">
               <Button><a href="/official-docs/winterschool2017_poster.pdf">Poster (PDF)</a></Button>
