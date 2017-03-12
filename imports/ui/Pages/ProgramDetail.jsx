@@ -46,7 +46,7 @@ export class ProgramCT extends Component {
           </ul>
           <h3 className="section-subsubheader">발표자료</h3>
           <ul>
-            <li><a href="http://mediviewsoft.com/"> Mediviewsoft 홈페이지</a>에서 다운로드 가능</li>
+            <li><a href="http://mediviewsoft.com/event/2017/03/05/winterschool-2017/"> Mediviewsoft 홈페이지</a>에서 다운로드 가능</li>
           </ul>
           <h3 className="section-subsubheader">Schedule</h3>
           <Table responsive>
